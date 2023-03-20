@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">@color/theme</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/theme</color>
+
+    <color name="theme">#262262</color>
+    <color name="theme_gray1">#333333</color>
+    <color name="theme_gray2">#F5F5F5</color>
+    <color name="theme_gray3">#96979A</color>
+    <color name="divider">#DADADA</color>
+    <color name="toolbar">#1E1D2E</color>
+    <color name="tab_bg">#3D3C4D</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent">#90FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_transparent">#80000000</color>
+    <color name="green">#2eaf4d</color>
+    <color name="red">#ff1744</color>
+    <color name="sky">#06A1CE</color>
+    <color name="gray">#D9D9D9</color>
+    <color name="orange">#FFA500</color>
+    <color name="light_blue">#00FFFF</color>
+
+    <color name="booking_canceled">#e06666</color>
+    <color name="duty_started">#ADD8E6</color>
+    <color name="reached_at_pickup_point">#00FFFF</color>
+    <color name="no_show">#FFA500</color>
+    <color name="guest_arrived">#7FFFD4</color>
+    <color name="reached_drop_point">#b0b000</color>
+    <color name="duty_ended">#37ff37</color>
+    <color name="final_invoice_generated">#059a05</color>
+
 </resources>

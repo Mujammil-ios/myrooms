@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="rotate_duration">100</integer>
+    <integer name="ration_width_1920">1920</integer>
+    <integer name="ration_height_1080">1080</integer>
+</resources>
