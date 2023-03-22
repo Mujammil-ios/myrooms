@@ -18,10 +18,12 @@
 
     <dimen name="size160">@dimen/_160sdp</dimen>
     <dimen name="size120">@dimen/_120sdp</dimen>
+    <dimen name="size100">@dimen/_100sdp</dimen>
     <dimen name="size80">@dimen/_80sdp</dimen>
     <dimen name="size70">@dimen/_70sdp</dimen>
     <dimen name="size60">@dimen/_60sdp</dimen>
     <dimen name="size50">@dimen/_50sdp</dimen>
+    <dimen name="size40">@dimen/_40sdp</dimen>
     <dimen name="size20">@dimen/_20sdp</dimen>
     <dimen name="size15">@dimen/_15sdp</dimen>
     <dimen name="size12">@dimen/_12sdp</dimen>

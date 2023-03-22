@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
                         null,
-                        MainActivity.class,
+                        RegisterAccountActivity.class,
                         new Bundle(),
                         null);
             }

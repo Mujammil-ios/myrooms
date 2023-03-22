@@ -20,34 +20,9 @@ public class PreferenceUtils {
     private String preference_username = "username";
     private String preference_password = "password";
     private String preference_isLoggedIn = "isLoggedIn";
+    private String preference_isFirstTime = "isFirstTime";
 
     private String preference_userModel = "userModel";
-
-
-
-    private String preference_company_legal_name = "companyLegalName";
-    private String preference_company_name = "companyName";
-    private String preference_sac_code = "sacCode";
-    private String preference_company_compostition = "companyComposition";
-    private String preference_msme_number = "msmeNumber";
-    private String preference_address_1 = "address1";
-    private String preference_address_2 = "address2";
-    private String preference_select_country = "country";
-    private String preference_select_city = "city";
-    private String preference_select_state = "state";
-    private String preference_pincode = "pincode";
-    private String preference_billing_address_1 = "billingAddress1";
-    private String preference_billing_address_2 = "billingAddress2";
-    private String preference_select_billing_country = "billingCountry";
-    private String preference_select_billing_city = "city";
-    private String preference_select_billing_state = "state";
-    private String preference_billing_pincode = "pincode";
-    private String preference_gst_status = "gstStatus";
-    private String preference_gst_number = "gstNumber";
-    private String preference_tan_number = "tanNumber";
-    private String preference_pan_number = "panNumber";
-    private String preference_invoice_prefix = "invoicePrefix";
-//    private String preference_operational_desk_number = "invoicePrefix";
 
     // shared preferences
     private SharedPreferences sp_locale;
@@ -98,6 +73,14 @@ public class PreferenceUtils {
 
     public void setLoggedIn(boolean isLoggedIn) {
         sp_locale.edit().putBoolean(preference_isLoggedIn, isLoggedIn).commit();
+    }
+    // store - is user first time or not
+    public boolean getFirstTime() {
+        return sp_locale.getBoolean(preference_isFirstTime, false);
+    }
+
+    public void setFirstTime(boolean isFirstTime) {
+        sp_locale.edit().putBoolean(preference_isFirstTime, isFirstTime).commit();
     }
 
     // store - user credential

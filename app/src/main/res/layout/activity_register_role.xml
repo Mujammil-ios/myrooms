@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ll1">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_would_you_join"
+                style="@style/TextView_black_heading"
+                android:layout_marginLeft="@dimen/size40"
+                android:fontFamily="@font/font_opensans_semibold"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/size100"
+                android:text="@string/would_you_like_to" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/size20">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/coustomer_radio"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_15ssp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_as_coustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:minHeight="@dimen/_50sdp"
+                        android:fontFamily="@font/font_opensans_regular"
+                        android:text="@string/as_customer"
+                        android:textColor="@color/black"
+                        android:background="@drawable/background_text"
+                        android:padding="@dimen/space15"
+                        android:layout_marginHorizontal="@dimen/_10ssp"
+                        android:textSize="@dimen/_15ssp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/owner_radio"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_15ssp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_as_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:minHeight="@dimen/_50sdp"
+                        android:fontFamily="@font/font_opensans_regular"
+                        android:text="@string/as_owner"
+                        android:textColor="@color/black"
+                        android:background="@drawable/background_text"
+                        android:padding="@dimen/space15"
+                        android:layout_marginHorizontal="@dimen/_10ssp"
+                        android:textSize="@dimen/_15ssp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_below="@+id/ll1"
+                android:gravity="center |bottom">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:fontFamily="@font/font_opensans_semibold"
+                    android:layout_margin="@dimen/space8"
+                    android:background="@drawable/btn_bg_theme"
+                    android:text="@string/get_started"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+
