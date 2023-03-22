@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">myrooms</string>
+
+    <!-- Register Account -->
+    <string name="would_you_like_to">Would you like to join...</string>
+    <string name="as_customer">As Customer</string>
+    <string name="as_owner">As Owner</string>
+    <string name="next">Next</string>
+    <string name="email_phone">Email/Phone Number</string>
+    <string name="password">Password</string>
+    <string name="get_started">Get Started</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in_with">Sign In With</string>
+    <string name="sign_up_with">Sign Up With</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone number</string>
+    <string name="fullname">Full Name</string>
+    <string name="not_have_account">Haven\'t an account?</string>
 </resources>

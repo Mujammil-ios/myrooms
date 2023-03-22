@@ -14,13 +14,13 @@
             android:orientation="vertical"
             android:layout_gravity="center">
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_sign_in"
+                android:id="@+id/tv_sign_up"
                 style="@style/TextView_black_heading"
                 android:layout_gravity="center"
                 android:fontFamily="@font/font_opensans_semibold"
                 android:gravity="center"
-                android:layout_marginTop="@dimen/size100"
-                android:text="@string/sign_in" />
+                android:layout_marginTop="@dimen/size40"
+                android:text="@string/sign_up" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,25 +28,43 @@
                 android:orientation="vertical"
                 android:layout_marginTop="@dimen/_10ssp">
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_phoneNumber"
-                        style="@style/EditText"
-                        android:hint="@string/email_phone"
-                        android:layout_marginHorizontal="@dimen/_15ssp"
-                        android:background="@drawable/background_text_selected"
-                        android:padding="@dimen/space10" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_fullname"
+                    style="@style/EditText"
+                    android:hint="@string/fullname"
+                    android:layout_marginHorizontal="@dimen/_15ssp"
+                    android:background="@drawable/background_text_selected"
+                    android:padding="@dimen/space10" />
                 <View style="@style/Divider"
-                    android:layout_marginTop="@dimen/_10sdp"/>
+                    android:layout_margin="@dimen/_10sdp"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_email"
+                    style="@style/EditText"
+                    android:hint="@string/email"
+                    android:layout_marginHorizontal="@dimen/_15ssp"
+                    android:background="@drawable/background_text_selected"
+                    android:padding="@dimen/space10" />
+                <View style="@style/Divider"
+                    android:layout_margin="@dimen/_10sdp"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_phone"
+                    style="@style/EditText"
+                    android:hint="@string/phone"
+                    android:layout_marginHorizontal="@dimen/_15ssp"
+                    android:background="@drawable/background_text_selected"
+                    android:padding="@dimen/space10" />
+                <View style="@style/Divider"
+                    android:layout_margin="@dimen/_10sdp"/>
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_password"
-                        android:layout_marginTop="@dimen/_10ssp"
-                        android:background="@drawable/background_text_selected"
-                        style="@style/EditText"
-                        android:hint="@string/password"
-                        android:inputType="textPassword"
-                        android:layout_marginHorizontal="@dimen/_15ssp"
-                        android:padding="@dimen/space10" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_password"
+                    android:background="@drawable/background_text_selected"
+                    style="@style/EditText"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:layout_marginHorizontal="@dimen/_15ssp"
+                    android:padding="@dimen/space10" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,21 +82,7 @@
                     android:fontFamily="@font/font_opensans_semibold"
                     android:layout_margin="@dimen/space8"
                     android:background="@drawable/btn_bg_theme"
-                    android:text="@string/sign_in"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_forgot_password"
-                    style="@style/TextView_black"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/font_opensans_regular"
-                    android:gravity="center"
-                    android:layout_marginTop="@dimen/space3"
-                    android:text="@string/forgot_password" />
+                    android:text="@string/sign_up"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,7 +97,7 @@
                     android:gravity="center"
                     android:textSize="@dimen/_15ssp"
                     android:layout_marginTop="@dimen/space3"
-                    android:text="@string/sign_in_with" />
+                    android:text="@string/sign_up_with" />
             </LinearLayout>
 
             <LinearLayout
@@ -137,12 +141,13 @@
                     android:text="@string/not_have_account"
                     android:layout_marginBottom="@dimen/_20sdp"/>
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_sign_in"
                     style="@style/TextView_black"
                     android:layout_gravity="center"
                     android:fontFamily="@font/font_opensans_regular"
                     android:gravity="center"
                     android:layout_marginTop="@dimen/space3"
-                    android:text="@string/sign_up"
+                    android:text="@string/sign_in"
                     android:textColor="@color/main_blue"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_20sdp"/>

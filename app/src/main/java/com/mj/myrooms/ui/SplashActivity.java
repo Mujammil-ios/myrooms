@@ -36,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
                     bundle = new Bundle();
                 }
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
-                        LoginActivity.class,
+                        RegisterRoleActivity.class,
                         bundle,
                         true);
                 finish();
