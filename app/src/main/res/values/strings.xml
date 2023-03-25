@@ -18,4 +18,661 @@
     <string name="phone">Phone number</string>
     <string name="fullname">Full Name</string>
     <string name="not_have_account">Haven\'t an account?</string>
+
+
+
+
+<!--    From another project    -->
+
+
+    <string name="count_km">You have entered %s KM. are you sure?</string>
+    <string name="count_booking_id">Booking Id: %s</string>
+    <string name="count_total_slip">Total Slip: %s</string>
+    <string name="count_total_amount">Total Amount: %s</string>
+
+    <!-- date & time -->
+    <string name="diff_year">year</string>
+    <string name="diff_years">years</string>
+    <string name="diff_month">month</string>
+    <string name="diff_months">months</string>
+    <string name="diff_week">week</string>
+    <string name="diff_weeks">weeks</string>
+    <string name="diff_day">day</string>
+    <string name="diff_days">days</string>
+    <string name="diff_hour">hour</string>
+    <string name="diff_hours">hours</string>
+    <string name="diff_minute">minute</string>
+    <string name="diff_minutes">minutes</string>
+    <string name="diff_second">second</string>
+    <string name="diff_seconds">seconds</string>
+    <string name="ago">%1$s ago</string>
+
+    <!-- custom messages -->
+    <string name="go_to_setting">Go To Settings</string>
+    <string name="go">Go</string>
+    <string name="ok">Ok</string>
+    <string name="okay">Okay</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="discard">Discard</string>
+    <string name="no">No</string>
+    <string name="yes_top_up">Yes, Top Up</string>
+    <string name="yes_remove">Yes, Remove</string>
+    <string name="no_cancel">No, Cancel</string>
+    <string name="got_it_thanks">Got it, Thanks</string>
+    <string name="okay_got_it">Okay, Got it</string>
+    <string name="retry">Re-try</string>
+    <string name="deny">Deny</string>
+    <string name="action">Action</string>
+    <string name="submit">Submit</string>
+    <string name="continu">Continue</string>
+    <string name="remove">Remove</string>
+    <string name="done">Done</string>
+    <string name="more">More</string>
+    <string name="less">Less</string>
+    <string name="previous">Previous</string>
+    <string name="skip">Skip</string>
+    <string name="back">Back</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="logout">Logout</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+
+    <!-- server error -->
+    <string name="standard_error_408">We ran into an issue getting you the information you requested. Please try again later.</string>
+    <string name="standard_error_0">It seems like there is an error. Please go back and try again.</string>
+
+    <string name="error_no_internet">No Internet. Please check your network status and try again</string>
+    <string name="error_we_couldnt_find">We couldn\'t find what you were looking for. Try again later.</string>
+    <string name="error_enter_full_name">Please enter full name</string>
+    <string name="error_enter_first_name">Please enter first name</string>
+    <string name="error_enter_last_name">Please enter last name</string>
+    <string name="error_enter_email">Please enter email</string>
+    <string name="error_enter_valid_email">Please enter valid email</string>
+    <string name="error_enter_password">Please enter password</string>
+    <string name="error_enter_confirm_password">Please enter confirm password</string>
+    <string name="error_enter_old_password">Please enter old password</string>
+    <string name="error_enter_new_password">Please enter new password</string>
+    <string name="error_enter_confirm_new_password">Please enter confirm password</string>
+    <string name="error_password_does_not_match">Password and confirm password not matched</string>
+    <string name="error_enter_valid_password_hint">Please enter valid password (minimum 8 characters with at least 1 capital letter, number and special char)</string>
+    <string name="error_enter_mobile_no">Please enter mobile number</string>
+    <string name="error_enter_valid_mobile_no">Please enter valid mobile number</string>
+    <string name="error_enter_email_otp">Please enter email otp</string>
+    <string name="error_enter_otp">Please enter otp</string>
+    <string name="error_enter_km">Please enter km</string>
+    <string name="error_km_greter_garage_Start">Point start km can not be less than Garage start km</string>
+    <string name="error_km_greter_point_start">Point end km can not be less than Point start km</string>
+    <string name="error_km_greter_point_end">Garage end km can not be less than Point end km</string>
+    <string name="error_enter_company_name">Please enter company name</string>
+    <string name="error_select_company_name">Please select company name</string>
+    <string name="error_select_branch_name">Please select branch name</string>
+    <string name="error_select_customer_name">Please select customer name</string>
+    <string name="error_select_type">Please select type</string>
+    <string name="error_select_city">Please select city</string>
+    <string name="error_select_rental_location">Please select rental location</string>
+    <string name="error_select_state">Please select state</string>
+    <string name="error_select_duty_Type">Please select duty type</string>
+    <string name="error_select_supplier">Please select supplier</string>
+    <string name="error_select_supplier_package">Please select supplier package</string>
+    <string name="error_enter_rental_location">Please enter rental location</string>
+    <string name="error_enter_guest_name">Please enter guest name</string>
+    <string name="error_enter_contant_no">Please enter contact no</string>
+    <string name="error_enter_alternate_no">Please enter alternate no</string>
+    <string name="error_enter_amount">Please enter amount</string>
+    <string name="error_enter_valid_amount">Amount shold be greter than 0</string>
+    <string name="error_draw_signature">Please draw signature</string>
+    <string name="error_upload_image">Please upload image</string>
+    <string name="error_upload_receipt">Please upload receipt</string>
+    <string name="error_enter_supplier_name">Please enter supplier name</string>
+    <string name="error_enter_no_of_passengers">Please enter no of passengers</string>
+    <string name="error_enter_type_of_duty">Please enter type of duty</string>
+    <string name="error_select_car_type">Please select car type</string>
+    <string name="error_select_payment_method">Please select payment method</string>
+    <string name="error_select_car">Please select car</string>
+    <string name="error_select_driver">Please select driver</string>
+    <string name="error_select_pickup_date">Please select pickup date</string>
+    <string name="error_select_pickup_time">Please select pickup time</string>
+    <string name="error_enter_pickup_address">Please enter pickup address</string>
+    <string name="error_enter_arrival_details">Please enter arrival details</string>
+    <string name="error_select_birthdate">Please select birthdate</string>
+    <string name="error_select_drop_date">Please select drop date</string>
+    <string name="error_select_drop_time">Please select drop time</string>
+    <string name="error_enter_drop_address">Please enter drop address</string>
+    <string name="error_enter_departure_details">Please enter departure details</string>
+    <string name="error_enter_special_interactions">Please enter special interactions</string>
+    <string name="error_select_gender">Please select gender</string>
+    <string name="error_select_country">Please select country</string>
+    <string name="error_accept_terms_and_condition">Please select terms of service</string>
+    <string name="error_select_user_type">Please select user type</string>
+    <string name="error_enter_reason">Please enter reason</string>
+    <string name="error_enter_driver_number">Please enter driver number</string>
+    <string name="error_pickup_drop_date">Drop date should be greater than pickup date</string>
+    <string name="error_pickup_drop_time">Drop time should be greater than time date</string>
+    <string name="error_enter_company_legal_name">Please enter company legal name</string>
+    <string name="error_select_company_composition">select company composition</string>
+    <string name="error_select_msme">Please select MSME</string>
+    <string name="error_enter_address">Please enter address</string>
+    <string name="error_enter_pincode">Please enter Pincode</string>
+    <string name="error_select_gst_status">Please select GST status</string>
+    <string name="error_enter_gst_number">Please enter GST number</string>
+    <string name="error_enter_pan_number">Please enter PAN number</string>
+
+
+    <string name="msg_install_google_maps">Please install google maps</string>
+    <string name="msg_setting_camera_storage_permission">Without camera, storage permission you can not access. Go to settings, to enable camera, storage permission</string>
+    <string name="msg_setting_call_permission">Without call permission you can not access. Go to settings, to enable call permission</string>
+    <string name="msg_confirm_exit">Are you sure you want to close the app?</string>
+    <string name="msg_confirm_dicard_save">Are you sure you want to discard changes?</string>
+    <string name="msg_confirm_logout">Are you sure you want to logout?</string>
+    <string name="msg_terms_and_condition">I have read terms of service and I hereby accept them.</string>
+    <string name="msg_otp_sent_to_email_mobileno">Otp\'s will be shared on below mentioned email id and mobile number</string>
+    <string name="msg_do_you_have_toll_parking">Do you have Toll &amp; Parking?</string>
+    <string name="msg_enter_garage_start_km">Enter Garage Start KM</string>
+    <string name="msg_enter_garage_end_km">Enter Garage End KM</string>
+    <string name="msg_enter_point_start_km">Enter Point Start KM</string>
+    <string name="msg_enter_point_end_km">Enter Point End KM</string>
+    <string name="msg_enter_amount">Enter Amount</string>
+    <string name="msg_no_result_found">No results found</string>
+    <string name="msg_have_account">Have an account?</string>
+    <string name="msg_same_as_pickup_address">Same as Pickup address</string>
+    <string name="msg_no_data_found">No, data found</string>
+    <string name="msg_please_wait">Please wait...</string>
+
+    <string name="terms_of_service">terms of service</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="update">Update</string>
+    <string name="upload">Upload</string>
+    <string name="add">Add</string>
+    <string name="update_booking">Update Booking</string>
+    <string name="create_booking">Create Booking</string>
+    <string name="booking">Booking</string>
+    <string name="my_account">My Account</string>
+    <string name="change_password">Change Password</string>
+    <string name="notification">Notification</string>
+    <string name="cancel_duty">Cancel Duty</string>
+    <string name="existing_password">Existing Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="login">Login</string>
+    <string name="save">Save</string>
+    <string name="create_new_account">Create New Account ?&#160;</string>
+    <string name="full_name">Full Name</string>
+    <string name="residential_address">Residential Address</string>
+    <string name="office_address">Office Address</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="driver_alternate_number">Driver Alternate No.</string>
+    <string name="alternate_number">Alternate Number</string>
+    <string name="driving_lincence_no">Driving Licence No.</string>
+    <string name="driving_lincence_expire_on">Driving Licence Expires On</string>
+    <string name="badge_no">Badge No.</string>
+    <string name="badge_no_expire_on">Badge No. Expires On</string>
+    <string name="pan_number">Pan Number</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="bank_account_no">Bank Account No.</string>
+    <string name="bank_ifsc_code">Bank Ifsc Code</string>
+    <string name="request_otp">Request Otp</string>
+    <string name="email_otp">Email Otp</string>
+    <string name="mobile_otp">Mobile Otp</string>
+    <string name="verify">Verify</string>
+    <string name="reset">Reset</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_passowrd">New Password</string>
+    <string name="confirm_passowrd">Confirm Password</string>
+    <string name="past_booking">Past Booking</string>
+    <string name="todays_booking">Today\'s Booking</string>
+    <string name="future_booking">Future Booking</string>
+    <string name="pending_booking">Pending Booking</string>
+    <string name="new_booking">New Booking</string>
+    <string name="ongoing_booking">Ongoing Booking</string>
+    <string name="upcoming_booking">Upcoming Booking</string>
+    <string name="completed_booking">Completed Booking</string>
+    <string name="my_default_company">My Default Company</string>
+    <string name="state">State</string>
+    <string name="rental_location">Rental Location</string>
+    <string name="booking_id">Booking ID</string>
+    <string name="company_name">Company Name</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="guest_name">Guest Name</string>
+    <string name="guest_no">Guest No.</string>
+    <string name="guest_number">Guest Number</string>
+    <string name="alternate_no">Alternate No.</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="reporting_date">Reporting Date</string>
+    <string name="reporting_type">Reporting Type</string>
+    <string name="reporting_time">Reporting Time</string>
+    <string name="reporting_address">Reporting Address</string>
+    <string name="booking_package">Booking Package</string>
+    <string name="booked_package">Booked Package</string>
+    <string name="booked_by">Booked By</string>
+    <string name="actual_package">Actual Package</string>
+    <string name="booking_status">Booking Status</string>
+    <string name="driver_status">Driver Status</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="payment">Payment</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="car_no">Car No.</string>
+    <string name="special_instructions">Special Instructions</string>
+    <string name="toll_parking">Toll, Parking</string>
+    <string name="booking_details">Booking Details</string>
+    <string name="duty_slip">Duty Slip</string>
+    <string name="duty_slip_uploded">Duty Slip Uploaded</string>
+    <string name="duty_details">Duty Details</string>
+    <string name="view_booking_details">View Booking Details</string>
+    <string name="view_duty_details">View Duty Details</string>
+    <string name="cancel_booking">Cancel Booking</string>
+    <string name="edit_booking">Edit Booking</string>
+    <string name="garage_start_details">Garage Start Details</string>
+    <string name="start_date">Start Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="start_kms">Start Kms</string>
+    <string name="point_start_details">Point Start Details</string>
+    <string name="point_end_details">Point End Details</string>
+    <string name="garage_end_detials">Garage End Detials</string>
+    <string name="end_date">End Date</string>
+    <string name="end_time">End Time</string>
+    <string name="end_kms">End kms</string>
+    <string name="start">Start</string>
+    <string name="reached_at_pickup_point">Reached at pickup point</string>
+    <string name="duty_in_progress">Guest arrived and duty in progress</string>
+    <string name="halt">halt</string>
+    <string name="guest_signature">Guest Signature</string>
+    <string name="confirm_halt">Confirm Halt</string>
+    <string name="end_duty">End Duty</string>
+    <string name="clear">Clear</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="search">Search</string>
+    <string name="customer">Customer</string>
+    <string name="supplier">Supplier</string>
+    <string name="supplier_package">Supplier Package</string>
+    <string name="driver">Driver</string>
+    <string name="add_toll_parking">Add Toll/Parking</string>
+    <string name="upload_toll_parking">Upload Toll/Parking</string>
+    <string name="rate_view">Rate View</string>
+    <string name="invoices">Invoices</string>
+    <string name="subscriptions_invoices">Subscriptions Invoices</string>
+    <string name="company_and_guest_details">Company &amp; Guest Details</string>
+    <string name="supplier_and_duty_details">Supplier &amp; Duty Details</string>
+    <string name="pickup_details">Pickup Details</string>
+    <string name="drop_detail">Drop Details</string>
+    <string name="departure_detail">Departure Details</string>
+    <string name="add_one">Add Ons</string>
+
+
+    <string name="supplier_no">Supplier No.</string>
+    <string name="supplier_name">Supplier Name</string>
+    <string name="no_of_passengers">No of Passengers</string>
+    <string name="car_type">Car Type</string>
+    <string name="add_mobile_no">Add Mobile No.</string>
+    <string name="type_of_duty">Type of Duty</string>
+    <string name="packages">Package</string>
+    <string name="select_car_type">Select Car Type</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="select_supplier_name">Select Supplier Name</string>
+
+    <string name="select_supplier">Select Supplier</string>
+    <string name="select_supplier_package">Select Supplier Package</string>
+    <string name="select_type_of_duty">Select Type of Duty</string>
+    <string name="select_company_name">Select Company Name</string>
+    <string name="select_customer_name">Select Customer Name</string>
+    <string name="select_type">Select Type</string>
+    <string name="select_customer">Select Customer</string>
+    <string name="select_rental_location">Select Rental Location</string>
+    <string name="select_state">Select State</string>
+    <string name="select_package">Select Package</string>
+    <string name="select_city">Select City</string>
+    <string name="select_duty_type">Select Duty Type</string>
+    <string name="select_action">Select Action</string>
+    <string name="pickup_date">Pickup Date</string>
+    <string name="pickup_time">Pickup Time</string>
+    <string name="pickup_address">Pickup Address</string>
+    <string name="arrival_details">Arrival Details</string>
+    <string name="add_email">Add Email</string>
+    <string name="drop_date">Drop Date</string>
+    <string name="drop_time">Drop Time</string>
+    <string name="drop_address">Drop Address</string>
+    <string name="same_as_pickup_address">Same as pickup Address</string>
+    <string name="departure_details">Departure Details</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="driver_no">Driver No.</string>
+    <string name="log_details">Log details</string>
+    <string name="driver_number">Driver Number</string>
+    <string name="track_vehicle">Track Vehicle</string>
+    <string name="duty_status">Duty Status</string>
+    <string name="invoice_date">Invoice Date</string>
+    <string name="invoice_no">Invoice No.</string>
+    <string name="final_invoice_no">Final Invoice No.</string>
+    <string name="pre_invoice_no">Pre Invoice No.</string>
+    <string name="invoice_amount">Invoice Amount</string>
+    <string name="view_invoice">View Invoice</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select_country">Select Country</string>
+    <string name="login_here">Login Here</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="break_down">Break Down</string>
+    <string name="sublet_booking">Sublet Booking</string>
+    <string name="assign_car_driver">Assign Car &amp; Driver</string>
+    <string name="block_car_driver">Block Car &amp; Driver</string>
+    <string name="reason">Reason</string>
+    <string name="sublet">Sublet</string>
+    <string name="defaul">Default</string>
+    <string name="company">Company</string>
+    <string name="city">City</string>
+    <string name="duty_type">Duty Type</string>
+    <string name="package_name">Package</string>
+    <string name="gender">Gender</string>
+    <string name="country">Country</string>
+    <string name="car">Car</string>
+    <string name="filter">Filter</string>
+    <string name="fuel_surcharge_rate">Fuel Surcharge Rate</string>
+    <string name="min_hrs">Min. Hrs</string>
+    <string name="min_kms">Min. Kms</string>
+    <string name="min_amount">Min. Amount</string>
+    <string name="extra_hours">Extra Hours</string>
+    <string name="extra_km">Extra KM</string>
+    <string name="da">DA</string>
+    <string name="nh">NH</string>
+    <string name="oa">OA</string>
+    <string name="calculate_on">Calculate On</string>
+    <string name="type">Type</string>
+    <string name="bill_to_company">Bill to Company</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="cash">Cash</string>
+    <string name="credit_amount">Credit Amount</string>
+    <string name="invoiceno">Invoice No</string>
+    <string name="date">Date</string>
+    <string name="total_days">Total Days</string>
+    <string name="total_time">Total Time</string>
+    <string name="total_km">Total Km</string>
+    <string name="toll_and_parking">Toll/Parking</string>
+    <string name="basic_amount">Basic Amount</string>
+    <string name="final_amount">Final Amount</string>
+    <string name="pre_invoice">Pre Invoice</string>
+    <string name="final_invoice">Final Invoice</string>
+    <string name="club_invoice">Club Invoice</string>
+    <string name="pre_invoice_generated">Pre-Invoice generated</string>
+    <string name="final_invoice_generated">Final Invoice generated</string>
+    <string name="booking_subleted">Booking is subleted</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="message_shown_signature">Message to be shown when guest signature is clicked</string>
+    <string name="get_from_guest">(Get this from guest)</string>
+    <string name="edit_duty_type">Edit Duty Type</string>
+    <string name="edit_invoice">Edit Invoice</string>
+    <string name="finalize_invoice">Finalize Invoice</string>
+    <string name="gstin">GSTIN</string>
+    <string name="invoice_status">Invoice Status</string>
+    <string name="pending">Pending</string>
+    <string name="pending_to_be_Accepted_by_driver">Pending to be accepted by driver</string>
+    <string name="driver_not_assign">Driver Not assigned</string>
+    <string name="accepted_by_driver">Accepted By Driver</string>
+
+    <string name="enter_reason">Please Enter Reason</string>
+    <string name="own_billing_branch">Own Billing Branch</string>
+    <string name="actual_booking_details">Actual Booking Detail</string>
+    <string name="sublet_to_supplier">Sublet to Supplier</string>
+    <string name="assign_own_car">Assign Own Car</string>
+    <string name="booked_Duty_type">Booked Duty Type</string>
+    <string name="actual_Duty_type">Actual Duty Type</string>
+    <string name="duty_started">Duty Started</string>
+    <string name="sent_drop_otp">Sent Drop Otp</string>
+    <string name="guest_drop">Guest dropped at destination</string>
+    <string name="reached_drop_point">Reached Drop Point</string>
+    <string name="duty_completed">Duty Completed</string>
+    <string name="duty_ended">Duty Ended</string>
+    <string name="completed">Completed</string>
+    <string name="toll_details">Toll Details</string>
+    <string name="total_tall_amount">Total Toll Amount</string>
+    <string name="view_all_logs">View all logs</string>
+    <string name="view_toll_details">View Toll Details</string>
+    <string name="toll_amount">Toll Amount:</string>
+    <string name="no_image_available">No Image Available</string>
+    <string name="toll_parking_details">Toll Parking Details</string>
+    <string name="is_delete_option_available">isDeleteOptionAvailable</string>
+    <string name="delete_toll_msg">Are you sure you want to delete this Toll.</string>
+    <string name="edit_toll">Edit Toll Amount</string>
+    <string name="delete_toll">Delete Toll</string>
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="car_blocked">Car Blocked</string>
+    <string name="car_alloted">Car Alloted</string>
+    <string name="invite_supplier">Invite Supplier</string>
+    <string name="create_company">Create Company</string>
+    <string name="select_branch">Select Branch</string>
+    <string name="branch">Branch</string>
+    <string name="supplier_details">Supplier Details</string>
+    <string name="company_details">Company Details</string>
+    <string name="search_supplier">Search Supplier</string>
+    <string name="customer_number">Customer Number</string>
+    <string name="share_only_invoice">View/Share Only Invoice</string>
+    <string name="share_with_supported_doc">View/Share Invoice with Supported Documents</string>
+    <string name="expired_documents">Expired Documents</string>
+    <string name="remove_all">Remove All</string>
+    <string name="sac_code">SAC Code</string>
+    <string name="msme">MSME</string>
+    <string name="msme_number">MSME Number</string>
+    <string name="company_logo">Company Logo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_company_legal_name">Enter Company Legal Name</string>
+    <string name="this_company_legal_name_will_be_printed_on_invoices">This company legal name will be printed on invoices.</string>
+    <string name="this_company_name_can_be_short_name_or_brand_name_of_your_organization_this_name_will_be_displayed_for_selection_of_company_while_making_booking">This company name can be short name or brand name of your organization. This name will be displayed for selection of company while making booking.</string>
+    <string name="enter_sac_code">Enter SAC Code</string>
+    <string name="enter_msme_number">Enter MSME Number</string>
+    <string name="none">None</string>
+    <string name="select_msme">Select MSME</string>
+    <string name="head_office_this_is_for_record_purpose_only">Head Office (This is for record purpose only)</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="enter_address_line_1">Enter Address Line 1</string>
+    <string name="enter_address_line_2">Enter Address Line 2</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="pincode">Pincode</string>
+    <string name="enter_pincode">Enter Pincode</string>
+    <string name="billing_address">Billing Address</string>
+    <string name="gst_status">GST Status</string>
+    <string name="select_gst_status">Select GST Status</string>
+    <string name="gst_number">GST Number</string>
+    <string name="enter_gst_number">Enter GST Number</string>
+    <string name="gst_document">GST Document</string>
+    <string name="tan_number">TAN Number</string>
+    <string name="enter_tan_number">Enter TAN Number</string>
+    <string name="tan_document">TAN Document</string>
+    <string name="enter_pan_number">Enter PAN Number</string>
+    <string name="pan_document">PAN Document</string>
+    <string name="invoice_prefix">Invoice Prefix</string>
+    <string name="enter_invoice_prefix">Enter Invoice Prefix</string>
+    <string name="operation_desk_number">Operation Desk Numbers</string>
+    <string name="operation_desk_email">Operation Desk Email</string>
+    <string name="enter_operation_desk_number_comma_separated">Enter Operation Desk Number(Comma Separated)</string>
+    <string name="these_numbers_will_be_shared_in_booking_mail_and_will_be_displayed_to_customer">These numbers will be shared in booking mail and will be displayed to customer.</string>
+    <string name="enter_operation_desk_email_comma_separated">Enter Operation Desk Email(Comma Separated)</string>
+    <string name="these_email_ids_will_be_shared_on_booking_mail_and_will_be_displayed_to_customer">These email ids will be shared on booking mail and will be displayed to customer.</string>
+    <string name="contact_details_these_details_will_be_displayed_to_the_supplier">Contact Details (These details will be displayed to the Supplier)</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="enter_contact_name">Enter Contact Name</string>
+    <string name="enter_contact_number">Enter Contact Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="these_email_ids_will_receive_booing_mails_and_driver_details_mails">These Email Ids will receive booing mails and driver details mails.</string>
+    <string name="financial_contact">Financial Contact</string>
+    <string name="admin_contact">Admin Contact</string>
+    <string name="save_company">Save Company</string>
+    <string name="choose_file">Choose File</string>
+    <string name="no_file_chosen">No File Chosen</string>
+
+    <string-array name="array_company_composition">
+        <item>Select Company Composition</item>
+        <item>Co-operative Society</item>
+        <item>Limited Liability Partnership</item>
+        <item>Local Authorities</item>
+        <item>One Person Company</item>
+        <item>Partnership</item>
+        <item>Private Limited</item>
+        <item>Proprietorship</item>
+        <item>Public Limited</item>
+        <item>Section 8 Company</item>
+    </string-array>
+
+    <string-array name="array_MSME">
+        <item>Select MSME</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="array_gst_status">
+        <item>Select GST Status</item>
+        <item>Regular</item>
+        <item>Composition</item>
+        <item>Unregistered</item>
+        <item>Special Economic Zone</item>
+    </string-array>
+
+    <string-array name="array_gst_status_invoice">
+        <item>Registered</item>
+        <item>Unregistered</item>
+    </string-array>
+
+    <string-array name="array_RCM">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="array_next_duty">
+        <item>Select Next Duty</item>
+    </string-array>
+
+    <string-array name="array_select_garage_charge">
+        <item>Select Garage Charge</item>
+        <item>Fixed Garage Charge</item>
+        <item>Rate Per Km for Garage Kms</item>
+    </string-array>
+
+    <string-array name="array_Kms_Hrs">
+        <item>Kms. &amp; Hrs.</item>
+        <item>Kms.</item>
+    </string-array>
+
+    <string name="company_s_validation">Company(s)<font color='#FF0000'>*</font></string>
+    <string name="branch_s_validation">Branch(s)<font color='#FF0000'>*</font></string>
+    <string name="city_s_validation">City(s)<font color='#FF0000'>*</font></string>
+    <string name="select_package_s_validation">Select Package(s)<font color='#FF0000'>*</font></string>
+    <string name="company_legal_name_validation">Company Legal Name <font color='#FF0000'>*</font></string>
+    <string name="company_name_label_validation">Company Name <font color='#FF0000'>*</font></string>
+    <string name="company_Composition_validation">Company Composition<font color='#FF0000'>*</font></string>
+    <string name="msme_validation">MSME<font color='#FF0000'>*</font></string>
+    <string name="address_line_1_validation">Address Line 1<font color='#FF0000'>*</font></string>
+    <string name="country_validation">Country<font color='#FF0000'>*</font></string>
+    <string name="state_validation">State<font color='#FF0000'>*</font></string>
+    <string name="city_validation">City<font color='#FF0000'>*</font></string>
+    <string name="pincode_validation">Pincode<font color='#FF0000'>*</font></string>
+    <string name="gst_status_validation">GST Status<font color='#FF0000'>*</font></string>
+    <string name="gst_number_validation">GST Number<font color='#FF0000'>*</font></string>
+    <string name="pan_number_validation">Pan Number<font color='#FF0000'>*</font></string>
+    <string name="invoice_prefix_validation">Invoice Prefix<font color='#FF0000'>*</font></string>
+    <string name="contact_name_validation">Contact Name<font color='#FF0000'>*</font></string>
+    <string name="contact_no_validation">Contact No.<font color='#FF0000'>*</font></string>
+    <string name="email_validation">E-Mail ID<font color='#FF0000'>*</font></string>
+    <string name="isFromRegistration">isFromRegistration</string>
+    <string name="name_subs">Name:</string>
+    <string name="email_subscription">Email:</string>
+    <string name="mobile_subs">Mobile:</string>
+    <string name="proceed_to_pay">Proceed to Pay</string>
+    <string name="error_membership_plan">Please Choose Your Membership Plan</string>
+    <string name="membership_id">Membership ID</string>
+    <string name="membership_amount">Membership Amount</string>
+    <string name="regenerate_otp">Regenerate OTP</string>
+    <string name="error_package_already_selected">Package Already Selected</string>
+    <string name="error_branch_already_selected">Branch Already Selected</string>
+    <string name="error_city_already_selected">City Already Selected</string>
+    <string name="error_email_already_selected">Email Already Selected</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="amount">Amount</string>
+    <string name="print_invoice">Print Invoice</string>
+    <string name="billto">Bill To</string>
+    <string name="ea">EA</string>
+    <string name="new_customer_invitation">New Customer Invitation</string>
+    <string name="title_activity_invite_supplier_notification">InviteSupplierNotificationActivity
+    </string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="invited_by">Invited By</string>
+    <string name="rates">Rates</string>
+    <string name="view_rates">View Rates</string>
+    <string name="add_rates">Add Rates</string>
+
+    <string name="error_enter_type">Please Select Type</string>
+    <string name="error_select_customer">Please Select Customer</string>
+    <string name="rate_details">Rate Details</string>
+
+    <string name="car_segments">Car Segments<font color='#FF0000'>*</font></string>
+    <string name="car_type_validation">Car Type<font color='#FF0000'>*</font></string>
+
+    <string name="manual_supllier">manual_supllier</string>
+    <string name="manual_customer">manual_customer</string>
+    <string name="add_car_segment">Add Car Segment</string>
+    <string name="error_car_already_selected">Car Already Selected</string>
+    <string name="save_car_segment">Save Car Segment</string>
+    <string name="day_allowance">Day Allowance</string>
+    <string name="night_allowance">Night Allowance</string>
+    <string name="early_start_allowance">Early Start Allowance</string>
+    <string name="outstation_allowance">Outstation Allowance</string>
+    <string name="same_as_admin_contact">Same as admin contact</string>
+    <string name="no_notification">No Notification</string>
+    <string name="rates_effective_from">Rates Effective From<font color='#FF0000'>*</font></string>
+    <string name="copy_rates_from">Copy rates from</string>
+    <string name="billing_mode_will_be">"Billing mode will be:"</string>
+    <string name="g_to_g">Garage to Garage</string>
+    <string name="p_to_p">Point to Point</string>
+    <string name="day_allowance_will_be_charged">Day Allowance will be charged</string>
+    <string name="time_based">Time Based</string>
+    <string name="usage_based">Usage Based</string>
+    <string name="night_allowance_will_be_charged_after">Night Allowance will be charged after</string>
+    <string name="next_day_outstation_will_be_charged_after">Next day outstation will be charged after (Outstation packages only) </string>
+    <string name="hh_mm">HH:MM</string>
+    <string name="early_allowance_will_be_charged_after">Early Allowance will be charged before</string>
+    <string name="rcm_will_be_applicable">RCM Will be applicable</string>
+    <string name="gst_will_be_charged_on_toll_parking">GST will be charged on toll, parking</string>
+    <string name="after_usage_of">After total usage of</string>
+    <string name="hrs_or">(Hrs.)</string>
+    <string name="or">or</string>
+    <string name="kms">(Kms.)</string>
+    <string name="next_package">next package</string>
+    <string name="will_be_charged">will be charged.</string>
+    <string name="this_location_will_be_served_by_validation">This location will be served by<font color='#FF0000'>*</font></string>
+    <string name="save_rates">Save Rates</string>
+    <string name="day_allowance_string_2">Day allowance will be charged if vehicle is used between</string>
+    <string name="to">to</string>
+    <string name="usage_based_string_2">Day allowance will be charged if total usage is more than</string>
+
+    <string name="error_select_from_date">Please Enter From Date</string>
+    <string name="error_select_to_date">Please Enter TO Date</string>
+    <string name="error_select_billing_mode">Please Select Billing Mode</string>
+    <string name="error_select_da_charge">Please Select Day Allowance Charge</string>
+    <string name="error_select_gst_charge">Please Select GST will charge or not</string>
+    <string name="fixed_garage_charge">Fixed Garage Charge</string>
+    <string name="per_km_garage_charge">Per KM Garage Charge</string>
+    <string name="error_amount_greater_than_one">Min Amount Value must be greater than or equal to 1.</string>
+    <string name="select_next_duty">Select Next Duty</string>
+    <string name="my_profile">My Profile</string>
+    <string name="something_wemt_wrong">Something went Wrong!</string>
+    <string name="view_supporting_documents">View Supporting Documents</string>
+    <string name="supporting_documents">Supporting Documents</string>
+    <string name="eg">(E.g. Toll, Duty Slips Etc.)</string>
+    <string name="reassign">Reassign</string>
+    <string name="share">Share</string>
+    <string name="download">Download</string>
+
 </resources>
