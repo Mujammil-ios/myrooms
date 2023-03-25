@@ -27,6 +27,9 @@
     <dimen name="size20">@dimen/_20sdp</dimen>
     <dimen name="size15">@dimen/_15sdp</dimen>
     <dimen name="size12">@dimen/_12sdp</dimen>
+    <dimen name="design_snackbar_padding_vertical_2lines">24dp</dimen>
+    <dimen name="design_snackbar_padding_vertical">14dp</dimen>
+
 
     <dimen name="text12">@dimen/_13ssp</dimen>
     <dimen name="text11">@dimen/_12ssp</dimen>
