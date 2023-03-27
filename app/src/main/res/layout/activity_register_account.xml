@@ -65,6 +65,18 @@
                     android:inputType="textPassword"
                     android:layout_marginHorizontal="@dimen/_15ssp"
                     android:padding="@dimen/space10" />
+                <View style="@style/Divider"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_confirm_password"
+                    android:background="@drawable/background_text_selected"
+                    style="@style/EditText"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:layout_marginHorizontal="@dimen/_15ssp"
+                    android:padding="@dimen/space10" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

@@ -1,17 +1,23 @@
 package com.mj.myrooms.utils;
 
+import static com.mj.myrooms.App.getAppContext;
+
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
+import android.util.Log;
 
 import com.mj.myrooms.App;
+import com.mj.myrooms.BuildConfig;
+import com.mj.myrooms.object.core.LoginResponse;
+import com.mj.myrooms.object.core.UserDetails;
+
+import java.util.ArrayList;
 
 public class PreferenceUtils {
     private static String TAG = "PreferenceUtils";
     private static PreferenceUtils instance;
-    private Context mContext;
 
-    private String PREFERENCE_LOCALE = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0).packageName;
+    private String PREFERENCE_LOCALE = Utility.getPackageName(App.getAppContext());
 
     // for app
     private String preference_fcmToken = "fcmToken";
@@ -24,14 +30,40 @@ public class PreferenceUtils {
 
     private String preference_userModel = "userModel";
 
+
+
+    private String preference_company_legal_name = "companyLegalName";
+    private String preference_company_name = "companyName";
+    private String preference_sac_code = "sacCode";
+    private String preference_company_compostition = "companyComposition";
+    private String preference_msme_number = "msmeNumber";
+    private String preference_address_1 = "address1";
+    private String preference_address_2 = "address2";
+    private String preference_select_country = "country";
+    private String preference_select_city = "city";
+    private String preference_select_state = "state";
+    private String preference_pincode = "pincode";
+    private String preference_billing_address_1 = "billingAddress1";
+    private String preference_billing_address_2 = "billingAddress2";
+    private String preference_select_billing_country = "billingCountry";
+    private String preference_select_billing_city = "city";
+    private String preference_select_billing_state = "state";
+    private String preference_billing_pincode = "pincode";
+    private String preference_gst_status = "gstStatus";
+    private String preference_gst_number = "gstNumber";
+    private String preference_tan_number = "tanNumber";
+    private String preference_pan_number = "panNumber";
+    private String preference_invoice_prefix = "invoicePrefix";
+//    private String preference_operational_desk_number = "invoicePrefix";
+
     // shared preferences
     private SharedPreferences sp_locale;
 
-    private PreferenceUtils() throws PackageManager.NameNotFoundException {
+    private PreferenceUtils() {
         sp_locale = App.getAppContext().getSharedPreferences(PREFERENCE_LOCALE, Context.MODE_PRIVATE);
     }
 
-    public static PreferenceUtils getInstance() throws PackageManager.NameNotFoundException {
+    public static PreferenceUtils getInstance() {
         if (instance == null) {
             instance = new PreferenceUtils();
         }
@@ -123,13 +155,13 @@ public class PreferenceUtils {
 
 
     // store - logged in user's data
-/*    public UserModel getUser() {
-        return (UserModel) Utility.jsonToPojo(sp_locale.getString(preference_userModel, null), UserModel.class);
+    public LoginResponse getUser() {
+        return (LoginResponse) Utility.jsonToPojo(sp_locale.getString(preference_userModel, null), LoginResponse.class);
     }
 
-    public void setUser(UserModel object) {
+    public void setUser(LoginResponse object) {
         sp_locale.edit().putString(preference_userModel, Utility.pojoToJson(object)).commit();
-    }*/
+    }
 
     public String getLastTimeAPICalled() {
         return sp_locale.getString(preference_last_call, "");

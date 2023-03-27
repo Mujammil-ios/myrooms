@@ -138,6 +138,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"/>
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView_black"
+                    android:id="@+id/tv_sign_up"
                     android:layout_gravity="center"
                     android:fontFamily="@font/font_opensans_regular"
                     android:gravity="center"

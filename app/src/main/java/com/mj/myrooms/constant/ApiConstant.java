@@ -1,7 +1,7 @@
 package com.mj.myrooms.constant;
 
 public class ApiConstant {
-    public static final int STATUS_SUCCESS = 1;
+    public static final int STATUS_SUCCESS = 0;
 
     // response code
     public static final int STATUS_CODE_SUCCESS = 200;

@@ -53,6 +53,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.mj.myrooms.BuildConfig;
 import com.mj.myrooms.R;
 import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
@@ -308,14 +309,9 @@ public class Utility {
      * @return
      */
     public static String getPackageName(Context mContext) {
-        try {
-            return mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0).packageName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return "";
-        }
+        return BuildConfig.class.getPackage().toString();
     }
-
+//
     /**
      * find your keyhash for facebook from package name
      *
@@ -780,16 +776,16 @@ public class Utility {
         view.startAnimation(animation);
     }
 
-//    /**
-//     * check is user logged in
-//     */
-//    public static boolean isLoggedIn() {
-//        if (PreferenceUtils.getInstance().isLoggedIn() && PreferenceUtils.getInstance().getUser() != null) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+    /**
+     * check is user logged in
+     */
+    public static boolean isLoggedIn() {
+        if (PreferenceUtils.getInstance().isLoggedIn() && PreferenceUtils.getInstance().getUser() != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /**
      * double value conversion
