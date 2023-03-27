@@ -140,9 +140,9 @@ public class APIClient {
 
     public static APIInterface appInterface_server_usertype() {
         if (Utility.isLoggedIn()) {
-            if (PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails().getRoleId() == Constant.user_type_customer) {
+            if (PreferenceUtils.getInstance().getUser().getRoleId() == Constant.user_type_customer) {
                 return getClient(BASE_URL).create(APIInterface.class);
-            } else if (PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails().getRoleId() == Constant.user_type_owner) {
+            } else if (PreferenceUtils.getInstance().getUser().getRoleId() == Constant.user_type_owner) {
                 return getClient(BASE_URL).create(APIInterface.class);
             } else {
                 return getClient(BASE_URL).create(APIInterface.class);

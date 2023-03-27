@@ -9,6 +9,7 @@ import android.util.Log;
 import com.mj.myrooms.App;
 import com.mj.myrooms.BuildConfig;
 import com.mj.myrooms.object.core.LoginResponse;
+import com.mj.myrooms.object.core.ResponceData;
 import com.mj.myrooms.object.core.UserDetails;
 
 import java.util.ArrayList;
@@ -155,11 +156,11 @@ public class PreferenceUtils {
 
 
     // store - logged in user's data
-    public LoginResponse getUser() {
-        return (LoginResponse) Utility.jsonToPojo(sp_locale.getString(preference_userModel, null), LoginResponse.class);
+    public ResponceData getUser() {
+        return (ResponceData) Utility.jsonToPojo(sp_locale.getString(preference_userModel, null), ResponceData.class);
     }
 
-    public void setUser(LoginResponse object) {
+    public void setUser(ResponceData object) {
         sp_locale.edit().putString(preference_userModel, Utility.pojoToJson(object)).commit();
     }
 
