@@ -19,6 +19,7 @@ import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
 import com.mj.myrooms.databinding.ActivityLoginBinding;
 import com.mj.myrooms.object.core.LoginResponse;
+import com.mj.myrooms.object.core.ResponceData;
 import com.mj.myrooms.object.core.UserDetails;
 import com.mj.myrooms.services.APIClient;
 import com.mj.myrooms.utils.IntentUtils;
@@ -106,7 +107,7 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
      * navigate to dashboard
      */
     private void navigateToDashboard() {
-        UserDetails userDetails = PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails();
+        ResponceData userDetails = PreferenceUtils.getInstance().getUser();
         if (Constant.user_type_customer == userDetails.getRoleId()) {
             IntentUtils.getInstance().navigateToNextActivity(mActivity,
                     MainActivity.class,
@@ -154,8 +155,7 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
      * @param object_user
      */
     private void saveData(LoginResponse object_user) {
-        PreferenceUtils.getInstance().setAuthToken(object_user.getResponceData().getToken());
-        PreferenceUtils.getInstance().setUser(object_user);
+        PreferenceUtils.getInstance().setUser(object_user.getResponceData());
         PreferenceUtils.getInstance().setUserCredential(
                 layoutBinding.etPhoneNumber.getText().toString(),
                 layoutBinding.etPassword.getText().toString());

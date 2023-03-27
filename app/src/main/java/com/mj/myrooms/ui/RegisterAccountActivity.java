@@ -22,6 +22,7 @@ import com.mj.myrooms.databinding.ActivityRegisterAccountBinding;
 import com.mj.myrooms.listener.OnCloseListener;
 import com.mj.myrooms.object.core.CreateUserResponse;
 import com.mj.myrooms.object.core.LoginResponse;
+import com.mj.myrooms.object.core.ResponceData;
 import com.mj.myrooms.object.core.UserDetails;
 import com.mj.myrooms.services.APIClient;
 import com.mj.myrooms.utils.IntentUtils;
@@ -101,7 +102,7 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
      * navigate to dashboard
      */
     private void navigateToDashboard() {
-        UserDetails userDetails = PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails();
+        ResponceData userDetails = PreferenceUtils.getInstance().getUser();
         if (Constant.user_type_customer == userDetails.getRoleId()) {
             IntentUtils.getInstance().navigateToNextActivity(mActivity,
                     MainActivity.class,
@@ -140,22 +141,6 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
 
         layoutBinding.btnSubmit.setOnClickListener(this);
         layoutBinding.tvSignUp.setOnClickListener(this);
-    }
-
-    /**
-     * after login/registration save data and navigate
-     *
-     * @param object_user
-     */
-    private void saveData(LoginResponse object_user) {
-        PreferenceUtils.getInstance().setAuthToken(object_user.getResponceData().getToken());
-        PreferenceUtils.getInstance().setUser(object_user);
-        PreferenceUtils.getInstance().setUserCredential(
-                layoutBinding.etEmail.getText().toString(),
-                layoutBinding.etPassword.getText().toString());
-        PreferenceUtils.getInstance().setLoggedIn(true);
-        Bundle bundle = new Bundle();
-        navigateToDashboard();
     }
 
     /**
@@ -233,7 +218,7 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
                         PreferenceUtils.getInstance().setUser(response.getResponceData());
                         Bundle bundle = new Bundle();
                         bundle.putBoolean(getString(R.string.isFromRegistration), true);
-                        showSnackbarSuccess(mActivity, response.getMessage(), new OnCloseListener() {
+                        showSnackbarSuccess(mActivity, response.getResponceMessage(), new OnCloseListener() {
                             @Override
                             public void onClose() {
                                 IntentUtils.getInstance().navigateToNextActivity(mActivity,

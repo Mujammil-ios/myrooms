@@ -16,6 +16,7 @@ import com.mj.myrooms.R;
 import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
 import com.mj.myrooms.databinding.ActivitySplashBinding;
+import com.mj.myrooms.object.core.CreateUserResponse;
 import com.mj.myrooms.object.core.LoginResponse;
 import com.mj.myrooms.services.APIClient;
 import com.mj.myrooms.utils.IntentUtils;
@@ -92,8 +93,8 @@ public class SplashActivity extends BaseAppCompatActivity implements View.OnClic
      * @param object_user
      */
     private void saveData(LoginResponse object_user) {
-        PreferenceUtils.getInstance().setAuthToken(object_user.getResponceData().getToken());
-        PreferenceUtils.getInstance().setUser(object_user);
+        PreferenceUtils.getInstance().setAuthToken(object_user.getResponceData().getCreatedAt());
+        PreferenceUtils.getInstance().setUser(object_user.getResponceData());
         PreferenceUtils.getInstance().setLoggedIn(true);
 
         navigateToNext();
@@ -156,7 +157,7 @@ public class SplashActivity extends BaseAppCompatActivity implements View.OnClic
                     if (bundle == null) {
                         bundle = new Bundle();
                     }
-                    switch (PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails().getRoleId()) {
+                    switch (PreferenceUtils.getInstance().getUser().getRoleId()) {
                         case Constant.user_type_customer:
                             IntentUtils.getInstance().navigateToNextActivity(mActivity,
                                     MainActivity.class,
