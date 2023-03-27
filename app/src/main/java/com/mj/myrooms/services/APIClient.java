@@ -10,6 +10,7 @@ import com.ihsanbal.logging.LoggingInterceptor;
 import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
 import com.mj.myrooms.utils.PreferenceUtils;
+import com.mj.myrooms.utils.Utility;
 
 import java.io.IOException;
 
@@ -26,13 +27,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class APIClient {
     public static final String RQ_REGISTER = "register";
     public static final String RQ_LOGIN = "login";
+    public static final String RQ_CREATE_USER = "create_user";
     public static final String RQ_FORGOT_PASSWORD = "forgotPassword";
     public static final String RQ_VERIFY_OTP = "verifyOtp";
     public static final String RQ_VERIFY_NEW_OTP = "verifyNewOtp";
     public static final String RQ_CHANGE_PASSWORD = "changePassword";
     public static final String RQ_RESET_PASSWORD = "resetPassword";
     public static final String RQ_UPDATE_PROFILE = "updateProfile";
-    public static final String RQ_GET_PROFILE = "getProfile";
+    public static final String RQ_GET_ROLE = "get_role";
     public static final String RQ_GET_EDIT_TOLL = "editTollParking";
     public static final String RQ_GET_DELETE_TOLL = "deleteToll";
     public static final String RQ_GET_CANCEL_DUTY_NOTIFICATION = "getCancelNotification";
@@ -128,25 +130,27 @@ public class APIClient {
     public static final String RQ_BOOKING_DETAILS = "bookingDetails";
     public static final String RQ_LOG_DETAILS = "logdetails";
     public static final String RQ_ADD_DUTY_SLIP = "addDutySlip";
+    public static final String BASE_URL = "http://192.168.43.8:3001/api/v1/user/";
 
 
-//    public static APIInterface appInterface_server_user() {
-//        return getClient(BuildConfig.SERVER_USER).create(APIInterface.class);
-//    }
-//
-//    public static APIInterface appInterface_server_usertype() {
-//        if (Utility.isLoggedIn()) {
-//            if (PreferenceUtils.getInstance().getUser().getUsertype() == Constant.user_type_customer) {
-//                return getClient(BuildConfig.SERVER_CUSTOMER).create(APIInterface.class);
-//            } else if (PreferenceUtils.getInstance().getUser().getUsertype() == Constant.user_type_supplier) {
-//                return getClient(BuildConfig.SERVER_SUPPLIER).create(APIInterface.class);
-//            } else {
-//                return getClient(BuildConfig.SERVER_DRIVER).create(APIInterface.class);
-//            }
-//        } else {
-//            return getClient(BuildConfig.SERVER_USER).create(APIInterface.class);
-//        }
-//    }
+
+    public static APIInterface appInterface_server_user() {
+        return getClient(BASE_URL).create(APIInterface.class);
+    }
+
+    public static APIInterface appInterface_server_usertype() {
+        if (Utility.isLoggedIn()) {
+            if (PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails().getRoleId() == Constant.user_type_customer) {
+                return getClient(BASE_URL).create(APIInterface.class);
+            } else if (PreferenceUtils.getInstance().getUser().getResponceData().getUserDetails().getRoleId() == Constant.user_type_owner) {
+                return getClient(BASE_URL).create(APIInterface.class);
+            } else {
+                return getClient(BASE_URL).create(APIInterface.class);
+            }
+        } else {
+            return getClient(BASE_URL).create(APIInterface.class);
+        }
+    }
 
     public static OkHttpClient.Builder getClientBuilder() {
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -157,18 +161,10 @@ public class APIClient {
                 Request original = chain.request();
                 Request.Builder request = original.newBuilder();
 
-                request.addHeader(ApiConstant.HEADER_CONTENT_TYPE, ApiConstant.CONTENT_FORM_DATA);
-                try {
-                    if (!TextUtils.isEmpty(PreferenceUtils.getInstance().getAuthToken())) {
-                        try {
-                            request.addHeader(ApiConstant.HEADER_AUTH_TOKEN, PreferenceUtils.getInstance().getAuthToken());
-                        } catch (PackageManager.NameNotFoundException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                } catch (PackageManager.NameNotFoundException e) {
-                    e.printStackTrace();
-                }
+//                request.addHeader(ApiConstant.HEADER_CONTENT_TYPE, ApiConstant.CONTENT_FORM_DATA);
+//                if (!TextUtils.isEmpty(PreferenceUtils.getInstance().getAuthToken())) {
+//                    request.addHeader(ApiConstant.HEADER_AUTH_TOKEN, PreferenceUtils.getInstance().getAuthToken());
+//                }
 
                 return chain.proceed(request.build());
             }

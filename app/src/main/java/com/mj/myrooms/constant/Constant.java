@@ -40,8 +40,8 @@ public class Constant {
     /**
      * user type
      */
-    public static final int user_type_customer = 1;
-    public static final int user_type_supplier = 2;
+    public static final int user_type_customer = 0;
+    public static final int user_type_owner = 1;
     public static final int user_type_driver = 5;
 
 
@@ -74,6 +74,8 @@ public class Constant {
     public static final String userid = "userid";
     public static final String email = "email";
     public static final String password = "password";
+    public static final String usertype = "usertype";
+
     public static final String mailotp = "mailotp";
     public static final String otp = "otp";
     public static final String oldpassword = "oldpassword";

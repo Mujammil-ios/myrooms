@@ -34,6 +34,5 @@ public interface APIInterface {
                                    @Part MultipartBody.Part file);
     @Multipart
     @POST
-    Call<JsonObject> getProfile(@Url String url,
-                                @PartMap Map<String, RequestBody> params);
+    Call<JsonObject> getRole(@Url String url);
 }

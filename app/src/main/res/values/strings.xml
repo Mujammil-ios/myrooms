@@ -8,6 +8,7 @@
     <string name="next">Next</string>
     <string name="email_phone">Email/Phone Number</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="get_started">Get Started</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>

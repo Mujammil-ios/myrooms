@@ -3,7 +3,6 @@ package com.mj.myrooms;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -16,6 +15,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.mj.myrooms.listener.OnCloseListener;
+import com.mj.myrooms.object.wrapper.GetRoleResponse;
 import com.mj.myrooms.ui.LoginActivity;
 import com.mj.myrooms.utils.DialogUtils;
 import com.mj.myrooms.utils.IntentUtils;
@@ -272,40 +272,40 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         }
     }
 
-//    /**
-//     * show exception error
-//     *
-//     * @param mActivity
-//     * @param responseBody
-//     */
-//    protected void showExceptionError(Activity mActivity,String responseBody) {
-//        try {
-//            ResponseModel response = (ResponseModel) Utility.jsonToPojo(responseBody, ResponseModel.class);
-//            showSnackbarError(mActivity, response.getMessage());
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            showExceptionError(mActivity);
-//        }
-//    }
-//
-//    /**
-//     * show exception error
-//     *
-//     * @param mActivity
-//     * @param responseBody
-//     */
-//    protected void showExceptionError(Activity mActivity, ResponseBody responseBody) {
-//        try {
-//            ResponseModel response = (ResponseModel) Utility.jsonToPojo(responseBody.string(), ResponseModel.class);
-//            showSnackbarError(mActivity, response.getMessage());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            showExceptionError(mActivity);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            showExceptionError(mActivity);
-//        }
-//    }
+    /**
+     * show exception error
+     *
+     * @param mActivity
+     * @param responseBody
+     */
+    protected void showExceptionError(Activity mActivity,String responseBody) {
+        try {
+            GetRoleResponse response = (GetRoleResponse) Utility.jsonToPojo(responseBody, GetRoleResponse.class);
+            showSnackbarError(mActivity, response.getResponceMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            showExceptionError(mActivity);
+        }
+    }
+
+    /**
+     * show exception error
+     *
+     * @param mActivity
+     * @param responseBody
+     */
+    protected void showExceptionError(Activity mActivity, ResponseBody responseBody) {
+        try {
+            GetRoleResponse response = (GetRoleResponse) Utility.jsonToPojo(responseBody.string(), GetRoleResponse.class);
+            showSnackbarError(mActivity, response.getResponceMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+            showExceptionError(mActivity);
+        } catch (Exception e) {
+            e.printStackTrace();
+            showExceptionError(mActivity);
+        }
+    }
 
     /**
      * logout
@@ -321,11 +321,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
                     new DialogUtils.OnDialogOkCancelButtonClickListener() {
                         @Override
                         public void onOkButtonClick() {
-                            try {
-                                PreferenceUtils.getInstance().clearData();
-                            } catch (PackageManager.NameNotFoundException e) {
-                                e.printStackTrace();
-                            }
+                            PreferenceUtils.getInstance().clearData();
                             IntentUtils.getInstance().navigateToNextActivity(mActivity,
                                     LoginActivity.class,
                                     new Bundle(),
@@ -340,4 +336,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    public abstract void onClick(View v);
 }
