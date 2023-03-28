@@ -52,6 +52,7 @@ public class SplashActivity extends BaseAppCompatActivity implements View.OnClic
      * initialize toolbar
      */
     private void initToolbar() {
+//         Nothing
 
     }
 
