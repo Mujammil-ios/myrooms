@@ -181,6 +181,7 @@
 
     <string name="terms_of_service">terms of service</string>
     <string name="dashboard">Dashboard</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="update">Update</string>
     <string name="upload">Upload</string>
     <string name="add">Add</string>

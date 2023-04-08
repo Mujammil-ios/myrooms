@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.customer.CustomerLandingActivity">
+    tools:context=".ui.customer.CustomerLandingActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -121,15 +121,6 @@
         <item name="android:fontFamily">@font/font_opensans_semibold</item>
     </style>
 
-    <style name="btn_selected">
-        <item name="android:background"></item>
-        <item name="android:textColor">@drawable/background_text_selected</item>
-        <item name="android:minHeight">48dp</item>
-        <item name="android:paddingLeft">5dp</item>
-        <item name="android:paddingRight">5dp</item>
-    </style>
-
-
     <!-- Popup menu -->
     <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu">
         <item name="android:textColor">@color/theme_gray1</item>

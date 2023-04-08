@@ -1,4 +1,4 @@
-package com.mj.myrooms.ui.activity.customer;
+package com.mj.myrooms.ui.customer;
 
 import androidx.appcompat.app.AppCompatActivity;
 

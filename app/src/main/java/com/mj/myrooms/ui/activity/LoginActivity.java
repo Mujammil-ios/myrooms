@@ -1,10 +1,8 @@
 package com.mj.myrooms.ui.activity;
 
-import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -12,15 +10,6 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
-import com.facebook.CallbackManager;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.JsonObject;
 import com.mj.myrooms.BaseAppCompatActivity;
 import com.mj.myrooms.MainActivity;
@@ -48,10 +37,6 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
     private final String TAG = getClass().getSimpleName();
     private Activity mActivity = LoginActivity.this;
     private ActivityLoginBinding layoutBinding;
-    GoogleSignInClient mGoogleSignInClient;
-    CallbackManager callbackManager;
-    String userSocialId, userName, userEmail,userPhotoUriString;
-    private static final int RC_SIGN_IN = 11;
     private boolean isKeyboardTouch = false;
 
     @Override
@@ -116,52 +101,6 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
         }
     }
 
-    private void googleSignIn() {
-    }
-    /*Signing Out From Google*/
-    private void googleSignOut() {
-        final Task<Void> voidTask = mGoogleSignInClient.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                Snackbar.make(layoutBinding.getRoot(),"SignOut",Snackbar.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
-        }else {
-            callbackManager.onActivityResult(requestCode, resultCode, data);
-        }
-    }
-
-    /*google signIn result */
-    private void handleSignInResult(Task<GoogleSignInAccount> task) {
-        try {
-            GoogleSignInAccount account = task.getResult(ApiException.class);
-            googleLogin();
-        } catch (ApiException e) {
-            hideProgress();
-            e.printStackTrace();
-            Snackbar.make(layoutBinding.getRoot(),"Failed to Login",Snackbar.LENGTH_SHORT).show();
-        }
-    }
-
-    private void googleLogin() {
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if(account!=null){
-            userName = account.getDisplayName();
-            userEmail = account.getEmail();
-            userSocialId = account.getId();
-            userPhotoUriString = String.valueOf(account.getPhotoUrl());
-        }
-//        LoginAPI(userPhotoUriString);
-    }
-
     /**
      * navigate to dashboard
      */
@@ -191,23 +130,6 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
      * initialize listener
      */
     private void initListener() {
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        layoutBinding.googleLogo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(account!=null){
-                    googleSignOut();
-                }
-                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-                startActivityForResult(signInIntent, RC_SIGN_IN);
-                googleSignIn();
-            }
-        });
-
         layoutBinding.etPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {

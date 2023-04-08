@@ -1,4 +1,4 @@
-package com.mj.myrooms.ui.activity.owner;
+package com.mj.myrooms.ui.owner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
