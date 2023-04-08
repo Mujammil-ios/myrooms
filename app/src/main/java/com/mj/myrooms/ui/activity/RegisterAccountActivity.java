@@ -1,6 +1,5 @@
-package com.mj.myrooms.ui;
+package com.mj.myrooms.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
@@ -17,13 +16,10 @@ import com.mj.myrooms.MainActivity;
 import com.mj.myrooms.R;
 import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
-import com.mj.myrooms.databinding.ActivityLoginBinding;
 import com.mj.myrooms.databinding.ActivityRegisterAccountBinding;
 import com.mj.myrooms.listener.OnCloseListener;
 import com.mj.myrooms.object.core.CreateUserResponse;
-import com.mj.myrooms.object.core.LoginResponse;
 import com.mj.myrooms.object.core.ResponceData;
-import com.mj.myrooms.object.core.UserDetails;
 import com.mj.myrooms.services.APIClient;
 import com.mj.myrooms.utils.IntentUtils;
 import com.mj.myrooms.utils.PreferenceUtils;

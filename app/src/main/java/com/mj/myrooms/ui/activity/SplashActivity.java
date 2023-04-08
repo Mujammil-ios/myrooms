@@ -1,4 +1,4 @@
-package com.mj.myrooms.ui;
+package com.mj.myrooms.ui.activity;
 
 import androidx.databinding.DataBindingUtil;
 
@@ -16,7 +16,6 @@ import com.mj.myrooms.R;
 import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
 import com.mj.myrooms.databinding.ActivitySplashBinding;
-import com.mj.myrooms.object.core.CreateUserResponse;
 import com.mj.myrooms.object.core.LoginResponse;
 import com.mj.myrooms.services.APIClient;
 import com.mj.myrooms.utils.IntentUtils;

@@ -1,169 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <FrameLayout
         android:id="@+id/view_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:fitsSystemWindows="true">
+        android:background="@color/white">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_sign_up"
-                style="@style/TextView_black_heading"
-                android:layout_gravity="center"
-                android:fontFamily="@font/font_opensans_semibold"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/size40"
-                android:text="@string/sign_up" />
-
+            android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginTop="@dimen/_10ssp">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_fullname"
-                    style="@style/EditText"
-                    android:hint="@string/fullname"
-                    android:layout_marginHorizontal="@dimen/_15ssp"
-                    android:background="@drawable/background_text_selected"
-                    android:padding="@dimen/space10" />
-                <View style="@style/Divider"
-                    android:layout_margin="@dimen/_10sdp"/>
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_email"
-                    style="@style/EditText"
-                    android:hint="@string/email"
-                    android:layout_marginHorizontal="@dimen/_15ssp"
-                    android:background="@drawable/background_text_selected"
-                    android:padding="@dimen/space10" />
-                <View style="@style/Divider"
-                    android:layout_margin="@dimen/_10sdp"/>
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_phone"
-                    style="@style/EditText"
-                    android:hint="@string/phone"
-                    android:layout_marginHorizontal="@dimen/_15ssp"
-                    android:background="@drawable/background_text_selected"
-                    android:padding="@dimen/space10" />
-                <View style="@style/Divider"
-                    android:layout_margin="@dimen/_10sdp"/>
-
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_password"
-                    android:background="@drawable/background_text_selected"
-                    style="@style/EditText"
-                    android:hint="@string/password"
-                    android:inputType="textPassword"
-                    android:layout_marginHorizontal="@dimen/_15ssp"
-                    android:padding="@dimen/space10" />
-                <View style="@style/Divider"
-                    android:layout_margin="@dimen/_10sdp"/>
-
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_confirm_password"
-                    android:background="@drawable/background_text_selected"
-                    style="@style/EditText"
-                    android:hint="@string/confirm_password"
-                    android:inputType="textPassword"
-                    android:layout_marginHorizontal="@dimen/_15ssp"
-                    android:padding="@dimen/space10" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_10ssp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_submit"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_gravity="bottom"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_15ssp"
-                    android:fontFamily="@font/font_opensans_semibold"
-                    android:layout_margin="@dimen/space8"
-                    android:background="@drawable/btn_bg_theme"
-                    android:text="@string/sign_up"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_15ssp">
+                android:layout_gravity="center">
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_sign_up"
                     style="@style/TextView_black_heading"
                     android:layout_gravity="center"
                     android:fontFamily="@font/font_opensans_semibold"
                     android:gravity="center"
-                    android:textSize="@dimen/_15ssp"
-                    android:layout_marginTop="@dimen/space3"
-                    android:text="@string/sign_up_with" />
+                    android:layout_marginTop="@dimen/size40"
+                    android:text="@string/sign_up"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_10ssp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_fullname"
+                        style="@style/EditText"
+                        android:hint="@string/fullname"
+                        android:layout_marginHorizontal="@dimen/_15ssp"
+                        android:background="@drawable/background_text_selected"
+                        android:padding="@dimen/space10" />
+                    <View style="@style/Divider"
+                        android:layout_margin="@dimen/_10sdp"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_email"
+                        style="@style/EditText"
+                        android:hint="@string/email"
+                        android:layout_marginHorizontal="@dimen/_15ssp"
+                        android:background="@drawable/background_text_selected"
+                        android:padding="@dimen/space10" />
+                    <View style="@style/Divider"
+                        android:layout_margin="@dimen/_10sdp"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_phone"
+                        style="@style/EditText"
+                        android:hint="@string/phone"
+                        android:layout_marginHorizontal="@dimen/_15ssp"
+                        android:background="@drawable/background_text_selected"
+                        android:padding="@dimen/space10" />
+                    <View style="@style/Divider"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_password"
+                        android:background="@drawable/background_text_selected"
+                        style="@style/EditText"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:layout_marginHorizontal="@dimen/_15ssp"
+                        android:padding="@dimen/space10" />
+                    <View style="@style/Divider"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_confirm_password"
+                        android:background="@drawable/background_text_selected"
+                        style="@style/EditText"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:layout_marginHorizontal="@dimen/_15ssp"
+                        android:padding="@dimen/space10" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10ssp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_submit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="bottom"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:fontFamily="@font/font_opensans_semibold"
+                        android:layout_margin="@dimen/space8"
+                        android:background="@drawable/btn_bg_theme"
+                        android:text="@string/sign_up"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_15ssp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black_heading"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/font_opensans_semibold"
+                        android:gravity="center"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_marginTop="@dimen/space3"
+                        android:text="@string/sign_up_with" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_15ssp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/apple"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/apple_logo"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook"
+                        android:id="@+id/facebook_logo"
+                        android:layout_margin="@dimen/_5sdp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/google"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/google_logo"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center |bottom">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/font_opensans_regular"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/size15"
+                        android:text="@string/not_have_account"
+                        android:layout_marginBottom="@dimen/_20sdp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_sign_in"
+                        style="@style/TextView_black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/font_opensans_regular"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/size15"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/main_blue"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_15ssp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/apple"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/apple_logo"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/facebook"
-                    android:id="@+id/facebook_logo"
-                    android:layout_margin="@dimen/_5sdp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/google"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/google_logo"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center |bottom">
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/TextView_black"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/font_opensans_regular"
-                    android:gravity="center"
-                    android:layout_marginTop="@dimen/space3"
-                    android:text="@string/not_have_account"
-                    android:layout_marginBottom="@dimen/_20sdp"/>
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_sign_in"
-                    style="@style/TextView_black"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/font_opensans_regular"
-                    android:gravity="center"
-                    android:layout_marginTop="@dimen/space3"
-                    android:text="@string/sign_in"
-                    android:textColor="@color/main_blue"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_20sdp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </ScrollView>
+    </FrameLayout>
 </layout>

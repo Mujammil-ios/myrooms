@@ -5,7 +5,7 @@
     <data>
 
     </data>
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -26,55 +26,55 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="@dimen/size20">
-                <LinearLayout
+                <RadioGroup
+                    android:id="@+id/radGrp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/coustomer_radio"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/_15ssp"/>
-                    <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <RadioButton
                         android:id="@+id/tv_as_coustomer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/coustomer_radio"
+                        android:drawablePadding="@dimen/_15ssp"
                         android:layout_gravity="center"
+                        android:textColor="@drawable/radio_flat_text_selector"
                         android:minHeight="@dimen/_50sdp"
                         android:fontFamily="@font/font_opensans_regular"
                         android:text="@string/as_customer"
-                        android:textColor="@color/black"
                         android:background="@drawable/background_text"
                         android:padding="@dimen/space15"
                         android:layout_marginHorizontal="@dimen/_10ssp"
-                        android:textSize="@dimen/_15ssp" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/owner_radio"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/_15ssp"/>
-                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="@dimen/_15ssp"/>
+
+                    <RadioButton
                         android:id="@+id/tv_as_owner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:drawableLeft="@drawable/owner_radio"
+                        android:drawablePadding="@dimen/_15ssp"
                         android:minHeight="@dimen/_50sdp"
                         android:fontFamily="@font/font_opensans_regular"
                         android:text="@string/as_owner"
-                        android:textColor="@color/black"
                         android:background="@drawable/background_text"
                         android:padding="@dimen/space15"
                         android:layout_marginHorizontal="@dimen/_10ssp"
-                        android:textSize="@dimen/_15ssp" />
-                </LinearLayout>
-
+                        android:textSize="@dimen/_15ssp"
+                        android:textColor="@drawable/radio_flat_text_selector"
+                        />
+                </RadioGroup>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,6 +96,6 @@
                     android:text="@string/get_started"/>
             </LinearLayout>
         </LinearLayout>
-    </RelativeLayout>
+    </FrameLayout>
 </layout>
 
