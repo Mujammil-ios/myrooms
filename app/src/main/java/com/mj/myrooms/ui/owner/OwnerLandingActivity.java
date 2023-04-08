@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.mj.myrooms.R;
+
 public class OwnerLandingActivity extends AppCompatActivity {
 
     @Override
