@@ -1,4 +1,4 @@
-package com.mj.myrooms.ui;
+package com.mj.myrooms.ui.activity;
 
 import androidx.databinding.DataBindingUtil;
 

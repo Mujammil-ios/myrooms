@@ -1,16 +1,13 @@
-package com.mj.myrooms.ui;
+package com.mj.myrooms.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.mj.myrooms.R;
 import com.mj.myrooms.databinding.ActivityOtpBindingImpl;
-import com.mj.myrooms.databinding.ActivitySplashBinding;
-import com.mj.myrooms.utils.IntentUtils;
 
 public class OtpActivity extends AppCompatActivity {
     private final String TAG = getClass().getSimpleName();

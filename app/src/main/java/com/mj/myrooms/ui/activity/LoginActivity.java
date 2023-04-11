@@ -1,6 +1,5 @@
-package com.mj.myrooms.ui;
+package com.mj.myrooms.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
@@ -18,12 +17,8 @@ import com.mj.myrooms.R;
 import com.mj.myrooms.constant.ApiConstant;
 import com.mj.myrooms.constant.Constant;
 import com.mj.myrooms.databinding.ActivityLoginBinding;
-import com.mj.myrooms.databinding.ActivityRegisterAccountBinding;
-import com.mj.myrooms.listener.OnCloseListener;
-import com.mj.myrooms.object.core.CreateUserResponse;
 import com.mj.myrooms.object.core.LoginResponse;
 import com.mj.myrooms.object.core.ResponceData;
-import com.mj.myrooms.object.core.UserDetails;
 import com.mj.myrooms.services.APIClient;
 import com.mj.myrooms.utils.IntentUtils;
 import com.mj.myrooms.utils.PreferenceUtils;
@@ -38,22 +33,22 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RegisterAccountActivity extends BaseAppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends BaseAppCompatActivity implements View.OnClickListener {
     private final String TAG = getClass().getSimpleName();
-    private Activity mActivity = RegisterAccountActivity.this;
-    private ActivityRegisterAccountBinding layoutBinding;
+    private Activity mActivity = LoginActivity.this;
+    private ActivityLoginBinding layoutBinding;
     private boolean isKeyboardTouch = false;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_register_account);
+        layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
         initToolbar();
         initListener();
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -88,10 +83,18 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
                 }
                 break;
 
-            case R.id.tv_sign_in:
+            case R.id.tv_forgot_password:
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
                         null,
-                        LoginActivity.class,
+                        RegisterRoleActivity.class,
+                        new Bundle(),
+                        null);
+                break;
+
+            case R.id.tv_sign_up:
+                IntentUtils.getInstance().navigateToNextActivity(mActivity,
+                        null,
+                        RegisterRoleActivity.class,
                         new Bundle(),
                         null);
                 break;
@@ -140,7 +143,23 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
         });
 
         layoutBinding.btnSubmit.setOnClickListener(this);
+        layoutBinding.tvForgotPassword.setOnClickListener(this);
         layoutBinding.tvSignUp.setOnClickListener(this);
+    }
+
+    /**
+     * after login/registration save data and navigate
+     *
+     * @param object_user
+     */
+    private void saveData(LoginResponse object_user) {
+        PreferenceUtils.getInstance().setUser(object_user.getResponceData());
+        PreferenceUtils.getInstance().setUserCredential(
+                layoutBinding.etPhoneNumber.getText().toString(),
+                layoutBinding.etPassword.getText().toString());
+        PreferenceUtils.getInstance().setLoggedIn(true);
+        Bundle bundle = new Bundle();
+            navigateToDashboard();
     }
 
     /**
@@ -151,27 +170,16 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
     private boolean isValidate() {
         boolean isValidate = true;
 
-        if (TextUtils.isEmpty(layoutBinding.etEmail.getText().toString().trim())) {
+        if (TextUtils.isEmpty(layoutBinding.etPhoneNumber.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_email));
             return false;
-        } else if (!ValidationUtils.getInstance().isValidEmail(layoutBinding.etEmail.getText().toString().trim())) {
+        } else if (!ValidationUtils.getInstance().isValidEmail(layoutBinding.etPhoneNumber.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_valid_email));
             return false;
         }
 
         if (TextUtils.isEmpty(layoutBinding.etPassword.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_password));
-            return false;
-        } else if (!ValidationUtils.getInstance().isValidPassword(layoutBinding.etPassword.getText().toString().trim())) {
-            showSnackbarError(mActivity, getString(R.string.error_enter_valid_password_hint));
-            return false;
-        }
-
-        if (TextUtils.isEmpty(layoutBinding.etConfirmPassword.getText().toString().trim())) {
-            showSnackbarError(mActivity, getString(R.string.error_enter_confirm_password));
-            return false;
-        } else if (!layoutBinding.etConfirmPassword.getText().toString().trim().equals(layoutBinding.etPassword.getText().toString().trim())) {
-            showSnackbarError(mActivity, getString(R.string.error_password_does_not_match));
             return false;
         }
 
@@ -189,11 +197,8 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
         // add request data
         Map<String, String> data = new HashMap<>();
         try {
-            data.put(Constant.email, layoutBinding.etFullname.getText().toString());
-            data.put(Constant.password, layoutBinding.etPhone.getText().toString());
-            data.put(Constant.password, layoutBinding.etEmail.getText().toString());
+            data.put(Constant.email, layoutBinding.etPhoneNumber.getText().toString());
             data.put(Constant.password, layoutBinding.etPassword.getText().toString());
-            data.put(Constant.password, layoutBinding.etConfirmPassword.getText().toString());
             data.put(Constant.device_type, Constant.const_device_type);
             data.put(Constant.device_token, PreferenceUtils.getInstance().getFcmToken());
             data.put(Constant.timezone, TimeZone.getDefault().getID());
@@ -204,29 +209,17 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
 
         showProgress(mActivity);
         Call call = APIClient.appInterface_server_user().post(
-                APIClient.RQ_CREATE_USER,
+                APIClient.RQ_LOGIN,
                 data);
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> json) {
                 hideProgress();
                 try {
-
-//                    Solve HEre
-                    CreateUserResponse response = (CreateUserResponse) Utility.jsonToPojo(json.body().toString(), CreateUserResponse.class);
+                    LoginResponse response = (LoginResponse) Utility.jsonToPojo(json.body().toString(), LoginResponse.class);
                     if (json.isSuccessful() && response.getResponceCode() == ApiConstant.STATUS_SUCCESS) {
-                        PreferenceUtils.getInstance().setUser(response.getResponceData());
-                        Bundle bundle = new Bundle();
-                        bundle.putBoolean(getString(R.string.isFromRegistration), true);
-                        showSnackbarSuccess(mActivity, response.getResponceMessage(), new OnCloseListener() {
-                            @Override
-                            public void onClose() {
-                                IntentUtils.getInstance().navigateToNextActivity(mActivity,
-                                        OtpActivity.class,
-                                        bundle,
-                                        true);
-                            }
-                        });                    } else {
+                        saveData(response);
+                    } else {
                         showExceptionError(mActivity, json.body().toString());
                     }
                 } catch (Exception e) {

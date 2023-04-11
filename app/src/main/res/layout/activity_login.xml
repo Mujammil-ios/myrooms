@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:fitsSystemWindows="true">
+        android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center">
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_sign_in"
                 style="@style/TextView_black_heading"
                 android:layout_gravity="center"
                 android:fontFamily="@font/font_opensans_semibold"
                 android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="@dimen/size100"
-                android:text="@string/sign_in" />
+                android:text="@string/sign_in"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/edt_ll"
                 android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tv_sign_in"
+                app:layout_constraintBottom_toTopOf="@id/btn_ll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="@dimen/_10ssp">
 
                     <androidx.appcompat.widget.AppCompatEditText
@@ -34,13 +36,13 @@
                         android:hint="@string/email_phone"
                         android:layout_marginHorizontal="@dimen/_15ssp"
                         android:background="@drawable/background_text_selected"
-                        android:padding="@dimen/space10" />
-                <View style="@style/Divider"
-                    android:layout_marginTop="@dimen/_10sdp"/>
+                        android:padding="@dimen/space10"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/et_password"
-                        android:layout_marginTop="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:background="@drawable/background_text_selected"
                         style="@style/EditText"
                         android:hint="@string/password"
@@ -53,6 +55,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
+                android:id="@+id/btn_ll"
+                app:layout_constraintTop_toBottomOf="@id/edt_ll"
+                app:layout_constraintBottom_toTopOf="@id/forgot_ll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="@dimen/_10ssp">
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_submit"
@@ -67,9 +74,14 @@
                     android:text="@string/sign_in"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/forgot_ll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/signIn_ll"
+                app:layout_constraintTop_toBottomOf="@id/forgot_ll"
                 android:gravity="center">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_forgot_password"
@@ -81,9 +93,14 @@
                     android:text="@string/forgot_password" />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/signIn_ll"
+                app:layout_constraintBottom_toTopOf="@id/integration_ll"
+                app:layout_constraintTop_toBottomOf="@id/forgot_ll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_15ssp">
                 <androidx.appcompat.widget.AppCompatTextView
@@ -97,10 +114,15 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/signIn_ll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/signUp_ll"
                 android:gravity="center"
+                android:id="@+id/integration_ll"
                 android:layout_marginTop="@dimen/_15ssp">
                 <ImageView
                     android:layout_width="wrap_content"
@@ -123,11 +145,16 @@
 
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/integration_ll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/signUp_ll"
                 android:orientation="horizontal"
-                android:gravity="center |bottom">
+                android:gravity="center_horizontal |bottom">
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView_black"
                     android:layout_gravity="center"
@@ -148,6 +175,5 @@
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_20sdp"/>
             </LinearLayout>
-        </LinearLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -16,7 +16,7 @@ import android.widget.FrameLayout;
 
 import com.mj.myrooms.listener.OnCloseListener;
 import com.mj.myrooms.object.wrapper.GetRoleResponse;
-import com.mj.myrooms.ui.LoginActivity;
+import com.mj.myrooms.ui.activity.LoginActivity;
 import com.mj.myrooms.utils.DialogUtils;
 import com.mj.myrooms.utils.IntentUtils;
 import com.mj.myrooms.utils.PreferenceUtils;
