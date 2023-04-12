@@ -1,41 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:fitsSystemWindows="true">
-
-        <LinearLayout
+        android:background="@color/white">
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_sign_up"
-                style="@style/TextView_black_heading"
-                android:layout_gravity="center"
-                android:fontFamily="@font/font_opensans_semibold"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/size40"
-                android:text="@string/sign_up" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
 
-            <LinearLayout
+            android:id="@+id/scroll">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="@dimen/_10ssp">
+                android:layout_height="match_parent"
+                android:id="@+id/scroll2"
+                app:layout_constraintTop_toTopOf="@id/scroll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_sign_up"
+                    style="@style/TextView_black_heading"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_opensans_semibold"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="@id/scroll2"
+                    app:layout_constraintBottom_toTopOf="@id/et_fullname"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/size40"
+                    android:text="@string/sign_up" />
+
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_fullname"
                     style="@style/EditText"
                     android:hint="@string/fullname"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sign_up"
+                    app:layout_constraintBottom_toTopOf="@id/div_1"
                     android:layout_marginHorizontal="@dimen/_15ssp"
                     android:background="@drawable/background_text_selected"
                     android:padding="@dimen/space10" />
                 <View style="@style/Divider"
+                    android:id="@+id/div_1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/et_email"
+                    app:layout_constraintTop_toBottomOf="@id/et_fullname"
                     android:layout_margin="@dimen/_10sdp"/>
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_email"
@@ -43,8 +60,17 @@
                     android:hint="@string/email"
                     android:layout_marginHorizontal="@dimen/_15ssp"
                     android:background="@drawable/background_text_selected"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/div_2"
+                    app:layout_constraintTop_toBottomOf="@id/div_1"
                     android:padding="@dimen/space10" />
                 <View style="@style/Divider"
+                    android:id="@+id/div_2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/et_phone"
+                    app:layout_constraintTop_toBottomOf="@id/et_email"
                     android:layout_margin="@dimen/_10sdp"/>
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_phone"
@@ -52,8 +78,17 @@
                     android:hint="@string/phone"
                     android:layout_marginHorizontal="@dimen/_15ssp"
                     android:background="@drawable/background_text_selected"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/div_3"
+                    app:layout_constraintTop_toBottomOf="@id/div_2"
                     android:padding="@dimen/space10" />
                 <View style="@style/Divider"
+                    android:id="@+id/div_3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/et_password"
+                    app:layout_constraintTop_toBottomOf="@id/et_phone"
                     android:layout_margin="@dimen/_10sdp"/>
 
 
@@ -61,11 +96,20 @@
                     android:id="@+id/et_password"
                     android:background="@drawable/background_text_selected"
                     style="@style/EditText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/div_4"
+                    app:layout_constraintTop_toBottomOf="@id/div_3"
                     android:hint="@string/password"
                     android:inputType="textPassword"
                     android:layout_marginHorizontal="@dimen/_15ssp"
                     android:padding="@dimen/space10" />
                 <View style="@style/Divider"
+                    android:id="@+id/div_4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/et_confirm_password"
+                    app:layout_constraintTop_toBottomOf="@id/et_password"
                     android:layout_margin="@dimen/_10sdp"/>
 
 
@@ -73,97 +117,112 @@
                     android:id="@+id/et_confirm_password"
                     android:background="@drawable/background_text_selected"
                     style="@style/EditText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/btn_submit"
+                    app:layout_constraintTop_toBottomOf="@id/div_4"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword"
                     android:layout_marginHorizontal="@dimen/_15ssp"
                     android:padding="@dimen/space10" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_10ssp">
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_submit"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:layout_gravity="bottom"
                     android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_sign_up_integration"
+                    app:layout_constraintTop_toBottomOf="@id/et_confirm_password"
                     android:textSize="@dimen/_15ssp"
                     android:fontFamily="@font/font_opensans_semibold"
                     android:layout_margin="@dimen/space8"
                     android:background="@drawable/btn_bg_theme"
                     android:text="@string/sign_up"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_15ssp">
+
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView_black_heading"
                     android:layout_gravity="center"
+                    android:id="@+id/tv_sign_up_integration"
                     android:fontFamily="@font/font_opensans_semibold"
                     android:gravity="center"
                     android:textSize="@dimen/_15ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/integration_ll"
+                    app:layout_constraintTop_toBottomOf="@id/btn_submit"
                     android:layout_marginTop="@dimen/space3"
                     android:text="@string/sign_up_with" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_15ssp">
-                <ImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/integration_ll"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/apple"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/apple_logo"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/facebook"
-                    android:id="@+id/facebook_logo"
-                    android:layout_margin="@dimen/_5sdp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/google"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/google_logo"/>
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sign_up_integration"
+                    app:layout_constraintBottom_toTopOf="@id/integration_ll"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_15ssp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/apple"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/apple_logo"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook"
+                        android:id="@+id/facebook_logo"
+                        android:layout_margin="@dimen/_5sdp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/google"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/google_logo"/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center |bottom">
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/TextView_black"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/font_opensans_regular"
-                    android:gravity="center"
-                    android:layout_marginTop="@dimen/space3"
-                    android:text="@string/not_have_account"
-                    android:layout_marginBottom="@dimen/_20sdp"/>
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_sign_in"
-                    style="@style/TextView_black"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/font_opensans_regular"
-                    android:gravity="center"
-                    android:layout_marginTop="@dimen/space3"
-                    android:text="@string/sign_in"
-                    android:textColor="@color/main_blue"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_20sdp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/signIn_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/scroll2"
+                    app:layout_constraintTop_toBottomOf="@id/integration_ll"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/font_opensans_regular"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/space20"
+                        android:text="@string/not_have_account"
+                        android:layout_marginBottom="@dimen/_20sdp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_sign_in"
+                        style="@style/TextView_black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/font_opensans_regular"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/space20"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/main_blue"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
