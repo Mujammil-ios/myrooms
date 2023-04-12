@@ -38,7 +38,7 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
         layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_register_role);
         initToolbar();
         initListener();
-        request_updateProfile();
+//        request_updateProfile();
 
     }
 
@@ -78,22 +78,28 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
 
             case R.id.btn_submit:
                 Utility.hideSoftKeyboard(mActivity);
+                bundle = new Bundle();
+                IntentUtils.getInstance().navigateToNextActivity(mActivity,
+                        null,
+                        RegisterAccountActivity.class,
+                        bundle,
+                        null);
 
-                if (isValidate()) {
-                    bundle = new Bundle();
-                    if (layoutBinding.tvAsCoustomer.isClickable() == isClicked) {
-                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_customer);
-                    } else if (layoutBinding.tvAsOwner.isClickable() == isClicked) {
-                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_owner);
-                    } /*else if (layoutBinding.rbDriver.isChecked()) {
-                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_driver);
-                    }*/
-                    IntentUtils.getInstance().navigateToNextActivity(mActivity,
-                            null,
-                            RegisterAccountActivity.class,
-                            bundle,
-                            null);
-                }
+//                if (isValidate()) {
+//                    bundle = new Bundle();
+////                    if (layoutBinding.tvAsCoustomer.isClickable() == isClicked) {
+////                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_customer);
+////                    } else if (layoutBinding.tvAsOwner.isClickable() == isClicked) {
+////                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_owner);
+////                    } /*else if (layoutBinding.rbDriver.isChecked()) {
+////                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_driver);
+////                    }*/
+//                    IntentUtils.getInstance().navigateToNextActivity(mActivity,
+//                            null,
+//                            RegisterAccountActivity.class,
+//                            bundle,
+//                            null);
+//                }
                 break;
         }
     }

@@ -19,6 +19,7 @@ import com.mj.myrooms.databinding.ActivitySplashBinding;
 import com.mj.myrooms.object.core.CreateUserResponse;
 import com.mj.myrooms.object.core.LoginResponse;
 import com.mj.myrooms.services.APIClient;
+import com.mj.myrooms.ui.activity.LoginActivity;
 import com.mj.myrooms.utils.IntentUtils;
 import com.mj.myrooms.utils.PreferenceUtils;
 import com.mj.myrooms.utils.Utility;
