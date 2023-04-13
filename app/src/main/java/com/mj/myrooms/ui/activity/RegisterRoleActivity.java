@@ -101,6 +101,10 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
 //                            null);
 //                }
                 break;
+
+//            case R.id.asCustomer_ll:
+//                layoutBinding.asCustomerLl.setSelected(true);
+//                break;
         }
     }
 
@@ -117,19 +121,19 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
      *
      * @return
      */
-    private boolean isValidate() {
-        boolean isValidate = true;
-
-        if (layoutBinding.tvAsOwner.isClickable() == !isClicked) {
-            showSnackbarError(mActivity, getResources().getString(R.string.error_select_user_type));
-            return false;
-        }else if (layoutBinding.tvAsCoustomer.isClickable() == !isClicked){
-            showSnackbarError(mActivity, getResources().getString(R.string.error_select_user_type));
-            return false;
-        }
-        return isValidate;
-
-    }
+//    private boolean isValidate() {
+//        boolean isValidate = true;
+//
+//        if (layoutBinding.tvAsOwner.isClickable() == !isClicked) {
+//            showSnackbarError(mActivity, getResources().getString(R.string.error_select_user_type));
+//            return false;
+//        }else if (layoutBinding.tvAsCoustomer.isClickable() == !isClicked){
+//            showSnackbarError(mActivity, getResources().getString(R.string.error_select_user_type));
+//            return false;
+//        }
+//        return isValidate;
+//
+//    }
     /**
      * API call - update profile
      */
