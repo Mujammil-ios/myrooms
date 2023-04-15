@@ -33,9 +33,9 @@
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/et_phoneNumber"
                         style="@style/EditText"
+                        android:background="@drawable/edittext_corner_style"
                         android:hint="@string/email_phone"
                         android:layout_marginHorizontal="@dimen/_15ssp"
-                        android:background="@drawable/background_text_selected"
                         android:padding="@dimen/space10"
                         android:layout_marginTop="@dimen/_10sdp"/>
 
@@ -43,7 +43,7 @@
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/et_password"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/background_text_selected"
+                        android:background="@drawable/edittext_corner_style"
                         style="@style/EditText"
                         android:hint="@string/password"
                         android:inputType="textPassword"
@@ -124,12 +124,6 @@
                 android:gravity="center"
                 android:id="@+id/integration_ll"
                 android:layout_marginTop="@dimen/_15ssp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/apple"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/apple_logo"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

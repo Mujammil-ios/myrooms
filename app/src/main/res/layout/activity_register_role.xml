@@ -34,14 +34,16 @@
                     <RadioGroup
                         android:id="@+id/radioGroup1"
                         android:layout_width="match_parent"
+                        android:background="@color/light_blue_transparent"
                         android:layout_height="match_parent" >
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            card_view:cardCornerRadius="2dp"
+                            card_view:cardCornerRadius="20dp"
                             android:layout_marginTop="5dp"
-                            card_view:cardElevation="2dp"
+                            card_view:cardElevation="8dp"
+                            android:layout_margin="@dimen/_5sdp"
                             xmlns:card_view="http://schemas.android.com/apk/res-auto">
                             <RadioButton
                                 android:id="@+id/radio0"
@@ -59,8 +61,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             card_view:cardElevation="2dp"
-                            card_view:cardCornerRadius="2dp"
+                            card_view:cardCornerRadius="20dp"
                             android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_margin="@dimen/_5sdp"
                             xmlns:card_view="http://schemas.android.com/apk/res-auto">
                             <RadioButton
                                 android:id="@+id/radio1"
