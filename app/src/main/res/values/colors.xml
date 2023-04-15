@@ -6,6 +6,7 @@
 
     <color name="theme">#262262</color>
     <color name="light_blue_main">#35C9FF</color>
+    <color name="light_blue_transparent">#4D35C9FF</color>
     <color name="theme_gray1">#333333</color>
     <color name="theme_gray2">#F5F5F5</color>
     <color name="theme_gray3">#96979A</color>
