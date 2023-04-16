@@ -3,9 +3,12 @@ package com.mj.myrooms.ui.activity;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.CompoundButton;
 
 import com.google.gson.JsonObject;
 import com.mj.myrooms.BaseAppCompatActivity;
@@ -29,8 +32,11 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
     private final String TAG = getClass().getSimpleName();
     private Activity mActivity = RegisterRoleActivity.this;
     private ActivityRegisterRoleBinding layoutBinding;
+    private PreferenceUtils preferenceUtils;
     boolean isClicked = true;
     private boolean isKeyboardTouch = false;
+    private boolean checked = true;
+    String str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +48,11 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
 
     }
 
+    public void clearRadioChecked() {
+        layoutBinding.radioGroup1.clearCheck();
+        layoutBinding.radio0.setChecked(false);
+        layoutBinding.radio1.setChecked(false);
+    }
     /**
      * initialize toolbar
      */
@@ -52,6 +63,7 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    clearRadioChecked();
         IntentUtils.getInstance().transitionPrevious(mActivity);
     }
 
@@ -76,19 +88,47 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
         Bundle bundle;
         switch (v.getId()) {
 
-            case R.id.btn_submit:
-                Utility.hideSoftKeyboard(mActivity);
-                bundle = new Bundle();
-                IntentUtils.getInstance().navigateToNextActivity(mActivity,
-                        null,
-                        RegisterAccountActivity.class,
-                        bundle,
-                        null);
 
+            case R.id.radio0:
+                bundle = new Bundle();
+                if (!layoutBinding.radio0.isSelected()){
+                        layoutBinding.radio0.setChecked(true);
+                        layoutBinding.radio0.setSelected(true);
+                        PreferenceUtils.getInstance().setValue("user_type", "Customer");
+                        bundle.putString("user_type", "Customer");
+                        submit(true, bundle);
+                }else{
+                    layoutBinding.radio0.setSelected(false);
+                    layoutBinding.radio0.setChecked(false);
+                    PreferenceUtils.getInstance().clearData();
+
+                }
+                break;
+
+            case R.id.radio1:
+            bundle = new Bundle();
+            if (!layoutBinding.radio1.isSelected()){
+                layoutBinding.radio1.setChecked(true);
+                layoutBinding.radio1.setSelected(true);
+                PreferenceUtils.getInstance().setValue("user_type", "Owner");
+                bundle.putString("user_type", "Owner");
+                submit(true, bundle);
+//                IntentUtils.getInstance().navigateToNextActivity(mActivity,
+//                        null,
+//                        RegisterAccountActivity.class,
+//                        bundle,
+//                        null);
+            }else{
+                layoutBinding.radio1.setSelected(false);
+                layoutBinding.radio1.setChecked(false);
+                PreferenceUtils.getInstance().clearData();
+            }
+            break;
+//
 //                if (isValidate()) {
 //                    bundle = new Bundle();
-////                    if (layoutBinding.tvAsCoustomer.isClickable() == isClicked) {
-////                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_customer);
+//                    if (layoutBinding.tvAsCoustomer.isClickable() == isClicked) {
+//                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_customer);
 ////                    } else if (layoutBinding.tvAsOwner.isClickable() == isClicked) {
 ////                        bundle.putInt(BundleConstant.EXTRA_USER_TYPE, Constant.user_type_owner);
 ////                    } /*else if (layoutBinding.rbDriver.isChecked()) {
@@ -100,7 +140,6 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
 //                            bundle,
 //                            null);
 //                }
-                break;
 
 //            case R.id.asCustomer_ll:
 //                layoutBinding.asCustomerLl.setSelected(true);
@@ -108,12 +147,30 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
         }
     }
 
+    private void submit(Boolean isFromOwner, Bundle bundle) {
+        layoutBinding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IntentUtils.getInstance().navigateToNextActivity(mActivity,
+                        null,
+                        RegisterAccountActivity.class,
+                        bundle,
+                        null);
+            }
+        });
+    }
 
     /**
      * initialize listener
      */
     private void initListener() {
+        
+        layoutBinding.radio0.setOnClickListener(this);
+        layoutBinding.radio1.setOnClickListener(this);
         layoutBinding.btnSubmit.setOnClickListener(this);
+
+        Intent intent = new Intent(this, RegisterAccountActivity.class);
+        intent.putExtra("radioChosen", str);
     }
 
     /**
