@@ -25,6 +25,13 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".myrooms.ui.activity.LandingPageActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".myrooms.ui.customer.CustomerLandingActivity"
             android:exported="false">
             <meta-data
