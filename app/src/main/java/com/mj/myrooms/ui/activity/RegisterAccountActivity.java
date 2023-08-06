@@ -50,8 +50,8 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
         layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_register_account);
         Bundle bundle = getIntent().getExtras();
         String stuff =bundle.getString("user_type");
-        Log.d(TAG, "VALUE" + stuff);
-        Toast.makeText(this, "Value" + stuff, Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "VALUE " + " " + stuff);
+        Toast.makeText(this, "Value " + stuff, Toast.LENGTH_SHORT).show();
 
         initToolbar();
         initListener();
@@ -84,11 +84,17 @@ public class RegisterAccountActivity extends BaseAppCompatActivity implements Vi
         switch (v.getId()) {
 
             case R.id.btn_submit:
-                Utility.hideSoftKeyboard(mActivity);
-                if (isValidate()) {
-                    request_login();
-                }
+                IntentUtils.getInstance().navigateToNextActivity(mActivity,
+                        null,
+                        LandingPageActivity.class,
+                        new Bundle(),
+                        null);
                 break;
+//                Utility.hideSoftKeyboard(mActivity);
+//                if (isValidate()) {
+//                    request_login();
+//                }
+//                break;
 
             case R.id.tv_sign_in:
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,

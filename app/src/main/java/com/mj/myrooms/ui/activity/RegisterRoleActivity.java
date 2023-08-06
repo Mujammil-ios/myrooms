@@ -168,9 +168,9 @@ public class RegisterRoleActivity extends BaseAppCompatActivity  implements View
         layoutBinding.radio0.setOnClickListener(this);
         layoutBinding.radio1.setOnClickListener(this);
         layoutBinding.btnSubmit.setOnClickListener(this);
-
-        Intent intent = new Intent(this, RegisterAccountActivity.class);
-        intent.putExtra("radioChosen", str);
+//
+//        Intent intent = new Intent(this, RegisterAccountActivity.class);
+//        intent.putExtra("radioChosen", str);
     }
 
     /**
