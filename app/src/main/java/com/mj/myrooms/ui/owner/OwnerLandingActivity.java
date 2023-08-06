@@ -35,7 +35,7 @@ public class OwnerLandingActivity extends AppCompatActivity {
         final FlareBar bottomBar = findViewById(R.id.bottomBar);
         bottomBar.setBarBackgroundColor(Color.parseColor("#FFFFFF"));
         ArrayList<Flaretab> tabs = new ArrayList<>();
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.home_icon),"Home","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.home_svg),"Home","#35C9FF"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.insight_icon),"Insights","#35C9FF"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.add_room_icon),"Add Room","#35C9FF"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.payment_icon),"Payments","#35C9FF"));
