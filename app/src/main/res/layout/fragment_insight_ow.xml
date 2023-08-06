@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.owner.fragment.InsightOwFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_sign_in"
+        style="@style/TextView_black_heading"
+        android:layout_gravity="center"
+        android:fontFamily="@font/font_opensans_semibold"
+        android:gravity="center"
+        android:text="Insights" />
+
+</FrameLayout>

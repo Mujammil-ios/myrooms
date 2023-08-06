@@ -93,5 +93,7 @@ dependencies {
     implementation 'com.mindorks.android:prdownloader:0.6.0'
     implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
     implementation 'com.github.vaibhav1929:android-navigation-bar:1.0'
+    implementation 'com.github.simformsolutions:SSCustomBottomNavigation:3.2'
+
 
 }
