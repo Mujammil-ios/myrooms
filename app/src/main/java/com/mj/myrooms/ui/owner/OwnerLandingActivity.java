@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -15,13 +14,11 @@ import com.flarebit.flarebarlib.FlareBar;
 import com.flarebit.flarebarlib.Flaretab;
 import com.flarebit.flarebarlib.TabEventObject;
 import com.mj.myrooms.R;
-import com.mj.myrooms.databinding.ActivityLandingPageBinding;
 import com.mj.myrooms.databinding.ActivityOwnerLandingBinding;
 import com.mj.myrooms.ui.owner.fragment.HomeOwFragment;
 import com.mj.myrooms.ui.owner.fragment.InsightOwFragment;
 import com.mj.myrooms.ui.owner.fragment.PaymentOwFragment;
 import com.mj.myrooms.ui.owner.fragment.ProfileOwFragment;
-import com.simform.custombottomnavigation.Model;
 
 import java.util.ArrayList;
 
@@ -35,11 +32,11 @@ public class OwnerLandingActivity extends AppCompatActivity {
         final FlareBar bottomBar = findViewById(R.id.bottomBar);
         bottomBar.setBarBackgroundColor(Color.parseColor("#FFFFFF"));
         ArrayList<Flaretab> tabs = new ArrayList<>();
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.home_svg),"Home","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.insight_icon),"Insights","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.add_room_icon),"Add Room","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.payment_icon),"Payments","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.profil_icon),"Profile","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.home),"Home","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.inshigts),"Insights","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.addroom),"Add Room","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.wallet),"Payments","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.profile),"Profile","#35C9FF"));
 
         bottomBar.setTabList(tabs);
         bottomBar.attachTabs(OwnerLandingActivity.this);
