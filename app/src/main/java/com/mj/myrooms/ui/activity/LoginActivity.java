@@ -20,6 +20,7 @@ import com.mj.myrooms.databinding.ActivityLoginBinding;
 import com.mj.myrooms.object.core.LoginResponse;
 import com.mj.myrooms.object.core.ResponceData;
 import com.mj.myrooms.services.APIClient;
+import com.mj.myrooms.ui.owner.OwnerLandingActivity;
 import com.mj.myrooms.utils.IntentUtils;
 import com.mj.myrooms.utils.PreferenceUtils;
 import com.mj.myrooms.utils.Utility;
@@ -94,7 +95,7 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
             case R.id.tv_sign_up:
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
                         null,
-                        RegisterRoleActivity.class,
+                        OwnerLandingActivity.class,
                         new Bundle(),
                         null);
                 break;
