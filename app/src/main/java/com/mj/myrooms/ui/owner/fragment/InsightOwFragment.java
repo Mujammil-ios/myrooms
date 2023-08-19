@@ -15,6 +15,7 @@ public class InsightOwFragment extends Fragment {
 
     public InsightOwFragment() {
         // Required empty public constructor
+        // Required empty public constructor
     }
 
     @Override
