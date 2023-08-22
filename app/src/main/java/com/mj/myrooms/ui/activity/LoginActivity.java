@@ -95,7 +95,7 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
             case R.id.tv_sign_up:
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
                         null,
-                        OwnerLandingActivity.class,
+                        RegisterRoleActivity.class,
                         new Bundle(),
                         null);
                 break;

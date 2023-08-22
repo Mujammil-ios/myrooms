@@ -15,6 +15,7 @@ import com.flarebit.flarebarlib.Flaretab;
 import com.flarebit.flarebarlib.TabEventObject;
 import com.mj.myrooms.R;
 import com.mj.myrooms.databinding.ActivityOwnerLandingBinding;
+import com.mj.myrooms.ui.owner.fragment.AddNewOwFragment;
 import com.mj.myrooms.ui.owner.fragment.HomeOwFragment;
 import com.mj.myrooms.ui.owner.fragment.InsightOwFragment;
 import com.mj.myrooms.ui.owner.fragment.PaymentOwFragment;
@@ -33,26 +34,27 @@ public class OwnerLandingActivity extends AppCompatActivity {
         bottomBar.setBarBackgroundColor(Color.parseColor("#FFFFFF"));
         ArrayList<Flaretab> tabs = new ArrayList<>();
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.home),"Home","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.inshigts),"Insights","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.addroom),"Add Room","#35C9FF"));
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.wallet),"Payments","#35C9FF"));
+//        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.inshigts),"Insights","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.addroom),"Add New","#35C9FF"));
+//        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.wallet),"Payments","#35C9FF"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.profile),"Profile","#35C9FF"));
 
         bottomBar.setTabList(tabs);
         bottomBar.attachTabs(OwnerLandingActivity.this);
+
+
         bottomBar.setTabChangedListener(new TabEventObject.TabChangedListener() {
             @Override
             public void onTabChanged(LinearLayout selectedTab, int selectedIndex, int oldIndex) {
                 //tabIndex starts from 0 (zero). Example : 4 tabs = last Index - 3
                 Fragment fragment = null;
-
                 switch (selectedIndex) {
                     case 0:
                         fragment = new HomeOwFragment();
                         loadFragment(fragment);
                         break;
                     case 1:
-                        fragment = new InsightOwFragment();
+                        fragment = new AddNewOwFragment();
                         loadFragment(fragment);
                         break;
                     case 2:
@@ -63,6 +65,7 @@ public class OwnerLandingActivity extends AppCompatActivity {
                         fragment = new ProfileOwFragment();
                         loadFragment(fragment);
                         break;
+
                 }
                 Toast.makeText(OwnerLandingActivity.this,"Tab "+ selectedIndex+" Selected.",Toast.LENGTH_SHORT).show();
             }
