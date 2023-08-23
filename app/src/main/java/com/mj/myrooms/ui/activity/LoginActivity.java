@@ -44,7 +44,6 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-
         initToolbar();
         initListener();
 
@@ -95,7 +94,7 @@ public class LoginActivity extends BaseAppCompatActivity implements View.OnClick
             case R.id.tv_sign_up:
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
                         null,
-                        RegisterRoleActivity.class,
+                        OwnerLandingActivity.class,
                         new Bundle(),
                         null);
                 break;

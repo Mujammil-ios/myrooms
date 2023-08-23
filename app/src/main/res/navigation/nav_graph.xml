@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragment">
+
+    <fragment
+        android:id="@+id/first_fragment"
+        android:name="com.mj.myrooms.ui.owner.fragment.HomeOwFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_home_ow" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/second_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/second_fragment"
+        android:name="com.mj.myrooms.ui.owner.fragment.AddNewOwFragment"
+        android:label="Leaderboard"
+        tools:layout="@layout/fragment_add_new_ow" >
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/third_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/third_fragment"
+        android:name="com.mj.myrooms.ui.owner.fragment.ProfileOwFragment"
+        android:label="Store"
+        tools:layout="@layout/fragment_profile_ow" >
+        <action
+            android:id="@+id/action_thirdFragment_to_fourthFragment"
+            app:destination="@id/first_fragment" />
+    </fragment>
+</navigation>

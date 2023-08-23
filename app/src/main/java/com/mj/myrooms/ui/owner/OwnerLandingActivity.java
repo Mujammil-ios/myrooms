@@ -1,18 +1,30 @@
 package com.mj.myrooms.ui.owner;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.customview.widget.Openable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.flarebit.flarebarlib.FlareBar;
 import com.flarebit.flarebarlib.Flaretab;
 import com.flarebit.flarebarlib.TabEventObject;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mj.myrooms.R;
 import com.mj.myrooms.databinding.ActivityOwnerLandingBinding;
 import com.mj.myrooms.ui.owner.fragment.AddNewOwFragment;
@@ -22,6 +34,8 @@ import com.mj.myrooms.ui.owner.fragment.PaymentOwFragment;
 import com.mj.myrooms.ui.owner.fragment.ProfileOwFragment;
 
 import java.util.ArrayList;
+
+import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class OwnerLandingActivity extends AppCompatActivity {
     private ActivityOwnerLandingBinding layoutBinding;

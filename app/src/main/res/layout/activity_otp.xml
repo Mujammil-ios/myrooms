@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:fitsSystemWindows="true">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_gravity="center"
-                >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll1"
+            app:layout_constraintTop_toTopOf="@id/view_root"
+            app:layout_constraintRight_toRightOf="@id/view_root"
+            app:layout_constraintLeft_toLeftOf="@id/view_root"
+            app:layout_constraintBottom_toTopOf="@id/ll2" android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/otpET1"
@@ -25,9 +22,8 @@
                     android:layout_height="70dp"
                     android:focusable="true"
                     android:inputType="number"
+                    android:layout_margin="@dimen/_10sdp"
                     android:cursorVisible="true"
-                    android:layout_marginLeft="@dimen/_10sdp"
-
                     android:maxLength="1"
                     android:gravity="center"
                     android:textSize="20sp"/>
@@ -38,7 +34,7 @@
                     android:layout_height="70dp"
                     android:inputType="number"
                     android:maxLength="1"
-                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
 
                     android:gravity="center"
                     android:textSize="20sp"/>
@@ -48,7 +44,7 @@
                     android:layout_height="70dp"
                     android:inputType="number"
                     android:maxLength="1"
-                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
 
                     android:gravity="center"
                     android:textSize="20sp"/>
@@ -58,7 +54,7 @@
                     android:layout_width="40dp"
                     android:layout_height="70dp"
                     android:maxLength="1"
-                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
 
                     android:gravity="center"
                     android:textSize="20sp"/>
@@ -66,8 +62,7 @@
                     android:id="@+id/otpET5"
                     android:layout_width="40dp"
                     android:layout_height="70dp"
-                    android:layout_marginLeft="@dimen/_10sdp"
-
+                    android:layout_margin="@dimen/_10sdp"
                     android:inputType="number"
                     android:maxLength="1"
                     android:gravity="center"
@@ -77,8 +72,8 @@
                     android:layout_width="40dp"
                     android:layout_height="70dp"
                     android:inputType="number"
-                    android:layout_marginLeft="@dimen/_10sdp"
-
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
                     android:gravity="center"
                     android:maxLength="1"
                     android:textSize="20sp"/>
@@ -87,8 +82,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_10ssp">
+                android:id="@+id/ll2"
+                app:layout_constraintTop_toBottomOf="@id/ll1"
+                app:layout_constraintRight_toRightOf="@id/ll1"
+                app:layout_constraintLeft_toLeftOf="@id/ll1"
+                app:layout_constraintBottom_toBottomOf="@id/view_root"
+                android:gravity="center">
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_submit"
                     android:layout_height="wrap_content"
@@ -102,8 +101,7 @@
                     android:text="@string/sign_up"/>
             </LinearLayout>
 
-        </LinearLayout>
 
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
