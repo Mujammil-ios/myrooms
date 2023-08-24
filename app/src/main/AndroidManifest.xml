@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mj" >
+    package="com.mj">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,6 +25,12 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".myrooms.ui.owner.activity.AddRoomOw"
+            android:exported="false" />
+        <activity
+            android:name=".myrooms.ui.owner.activity.AddCustomerOw"
+            android:exported="false" />
+        <activity
             android:name=".myrooms.ui.activity.LandingPageActivity"
             android:exported="false">
             <meta-data
@@ -33,14 +39,14 @@
         </activity>
         <activity
             android:name=".myrooms.ui.customer.CustomerLandingActivity"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".myrooms.ui.owner.OwnerLandingActivity"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -48,7 +54,7 @@
         <activity
             android:name=".myrooms.ui.activity.OtpActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -56,7 +62,7 @@
         <activity
             android:name=".myrooms.ui.activity.RegisterAccountActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -64,7 +70,7 @@
         <activity
             android:name=".myrooms.ui.activity.RegisterRoleActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -72,7 +78,7 @@
         <activity
             android:name=".myrooms.ui.activity.LoginActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -80,7 +86,7 @@
         <activity
             android:name=".myrooms.MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -88,7 +94,7 @@
         <activity
             android:name=".myrooms.ui.activity.SplashActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

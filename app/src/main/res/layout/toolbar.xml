@@ -28,7 +28,9 @@
             <TextView
                 android:id="@+id/Imv_app_icon"
                 android:layout_width="0dp"
-                android:text="fff"
+                android:text="Mujammil"
+                android:layout_gravity="center"
+                android:gravity="left|center"
                 android:fontFamily="@font/font_opensans_semibold"
                 android:textColor="@color/black"
                 android:textSize="@dimen/space15"
@@ -88,7 +90,8 @@
                 android:id="@+id/invisibleRightIcon"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_gravity="bottom|center"
+                android:layout_gravity="center|bottom"
+                android:gravity="left|center"
                 android:padding="@dimen/space2"
                 android:src="@drawable/send" />
 
