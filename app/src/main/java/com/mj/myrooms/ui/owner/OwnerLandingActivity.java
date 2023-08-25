@@ -51,7 +51,7 @@ public class OwnerLandingActivity extends AppCompatActivity {
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.home),"Home","#35C9FF"));
 //        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.inshigts),"Insights","#35C9FF"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.addroom),"Add New","#35C9FF"));
-//        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.wallet),"Payments","#35C9FF"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.wallet),"Payments","#35C9FF"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.profile),"Profile","#35C9FF"));
 
         bottomBar.setTabList(tabs);
