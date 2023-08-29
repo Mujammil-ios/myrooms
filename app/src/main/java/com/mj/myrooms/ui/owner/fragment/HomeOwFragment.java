@@ -19,7 +19,6 @@ public class HomeOwFragment extends Fragment {
     private ProgressBar progressBar;
     private TextView textPercentage;
     private TextView textRemainingTime;
-    private LottieAnimationView animationView;
 
     private final int totalDuration = 1000; // Total duration in milliseconds
     private final int updateInterval = 10; // Interval to update progress and text
