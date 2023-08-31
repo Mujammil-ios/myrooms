@@ -57,6 +57,7 @@ public class OwnerLandingActivity extends AppCompatActivity {
         bottomBar.setTabList(tabs);
         bottomBar.attachTabs(OwnerLandingActivity.this);
 
+        loadFragment(new HomeOwFragment());
 
         bottomBar.setTabChangedListener(new TabEventObject.TabChangedListener() {
             @Override

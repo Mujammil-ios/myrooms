@@ -80,7 +80,7 @@
                                 android:layout_marginLeft="@dimen/space3"
                                 android:layout_marginRight="@dimen/space3"
                                 android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/this_company_legal_name_will_be_printed_on_invoices"
+                                android:text="@string/this_tenant_legal_name_will_be_printed_on_invoices"
                                 android:textColor="@color/theme_gray3"
                                 android:textSize="@dimen/text8" />
                         </LinearLayout>
