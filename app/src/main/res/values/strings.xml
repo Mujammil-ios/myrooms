@@ -106,6 +106,7 @@
     <string name="error_km_greter_point_start">Point end km can not be less than Point start km</string>
     <string name="error_km_greter_point_end">Garage end km can not be less than Point end km</string>
     <string name="error_enter_company_name">Please enter company name</string>
+    <string name="error_enter_landlord_name">Please enter Landlord name</string>
     <string name="error_select_company_name">Please select company name</string>
     <string name="error_select_branch_name">Please select branch name</string>
     <string name="error_select_customer_name">Please select customer name</string>
@@ -450,6 +451,12 @@
     <string name="branch">Branch</string>
     <string name="supplier_details">Supplier Details</string>
     <string name="company_details">Company Details</string>
+    <string name="persnoal_details">Personal Information</string>
+    <string name="employment_details">Employment Details</string>
+    <string name="lease_details">Lease Details</string>
+    <string name="room_allocation">Room Allocation</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="identity_details">Identity Details</string>
     <string name="search_supplier">Search Supplier</string>
     <string name="customer_number">Customer Number</string>
     <string name="share_only_invoice">View/Share Only Invoice</string>
@@ -465,6 +472,7 @@
     <string name="enter_tenant_legal_name">Enter Tenant Legal Name</string>
     <string name="this_tenant_legal_name_will_be_printed_on_invoices">This tenant legal name will be printed on invoices.</string>
     <string name="this_company_name_can_be_short_name_or_brand_name_of_your_organization_this_name_will_be_displayed_for_selection_of_company_while_making_booking">This company name can be short name or brand name of your organization. This name will be displayed for selection of company while making booking.</string>
+    <string name="this_landlord_name_can_be_short_name_or_brand_name_of_your_organization_this_name_will_be_displayed_for_selection_of_company_while_making_booking">This company name can be short name or brand name of your property. This name will be displayed while making invoices.</string>
     <string name="enter_sac_code">Enter SAC Code</string>
     <string name="enter_msme_number">Enter MSME Number</string>
     <string name="none">None</string>
@@ -476,12 +484,15 @@
     <string name="address_line_2">Address Line 2</string>
     <string name="pincode">Pincode</string>
     <string name="enter_pincode">Enter Pincode</string>
+    <string name="enter_number">Enter Phone Number</string>
     <string name="billing_address">Billing Address</string>
     <string name="gst_status">GST Status</string>
     <string name="select_gst_status">Select GST Status</string>
     <string name="gst_number">GST Number</string>
     <string name="enter_gst_number">Enter GST Number</string>
+    <string name="enter_adhaar_number">Enter Adhaar Number</string>
     <string name="gst_document">GST Document</string>
+    <string name="adhaar_document">Adhaar Document</string>
     <string name="tan_number">TAN Number</string>
     <string name="enter_tan_number">Enter TAN Number</string>
     <string name="tan_document">TAN Document</string>
@@ -495,35 +506,32 @@
     <string name="these_numbers_will_be_shared_in_booking_mail_and_will_be_displayed_to_customer">These numbers will be shared in booking mail and will be displayed to customer.</string>
     <string name="enter_operation_desk_email_comma_separated">Enter Operation Desk Email(Comma Separated)</string>
     <string name="these_email_ids_will_be_shared_on_booking_mail_and_will_be_displayed_to_customer">These email ids will be shared on booking mail and will be displayed to customer.</string>
-    <string name="contact_details_these_details_will_be_displayed_to_the_supplier">Contact Details (These details will be displayed to the Supplier)</string>
+    <string name="contact_details_these_details_will_be_for_any_emergency_Case">Contact Details (These details will be used for any emergency case)</string>
     <string name="contact_name">Contact Name</string>
     <string name="enter_contact_name">Enter Contact Name</string>
     <string name="enter_contact_number">Enter Contact Number</string>
     <string name="enter_email">Enter Email</string>
     <string name="these_email_ids_will_receive_booing_mails_and_driver_details_mails">These Email Ids will receive booing mails and driver details mails.</string>
     <string name="financial_contact">Financial Contact</string>
-    <string name="admin_contact">Admin Contact</string>
+    <string name="contact">Contact</string>
     <string name="save_company">Save Company</string>
     <string name="choose_file">Choose File</string>
     <string name="no_file_chosen">No File Chosen</string>
 
     <string-array name="array_company_composition">
-        <item>Select Company Composition</item>
-        <item>Co-operative Society</item>
-        <item>Limited Liability Partnership</item>
-        <item>Local Authorities</item>
-        <item>One Person Company</item>
-        <item>Partnership</item>
-        <item>Private Limited</item>
-        <item>Proprietorship</item>
-        <item>Public Limited</item>
-        <item>Section 8 Company</item>
+        <item>Select Family members</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
     </string-array>
 
     <string-array name="array_MSME">
-        <item>Select MSME</item>
-        <item>Yes</item>
-        <item>No</item>
+        <item>Select Marital Status</item>
+        <item>Single</item>
+        <item>Married</item>
     </string-array>
 
     <string-array name="array_gst_status">
@@ -566,8 +574,9 @@
     <string name="company_legal_name_validation">Company Legal Name <font color='#FF0000'>*</font></string>
     <string name="customer_legal_name_validation">Tenant Legal Name <font color='#FF0000'>*</font></string>
     <string name="company_name_label_validation">Company Name <font color='#FF0000'>*</font></string>
-    <string name="company_Composition_validation">Company Composition<font color='#FF0000'>*</font></string>
-    <string name="msme_validation">MSME<font color='#FF0000'>*</font></string>
+    <string name="landlord_name_label_validation">Landlord Name <font color='#FF0000'>*</font></string>
+    <string name="family_member_validation">Total Family Members<font color='#FF0000'>*</font></string>
+    <string name="marital_validation">Marital Status<font color='#FF0000'>*</font></string>
     <string name="address_line_1_validation">Address Line 1<font color='#FF0000'>*</font></string>
     <string name="country_validation">Country<font color='#FF0000'>*</font></string>
     <string name="state_validation">State<font color='#FF0000'>*</font></string>
@@ -575,6 +584,7 @@
     <string name="pincode_validation">Pincode<font color='#FF0000'>*</font></string>
     <string name="gst_status_validation">GST Status<font color='#FF0000'>*</font></string>
     <string name="gst_number_validation">GST Number<font color='#FF0000'>*</font></string>
+    <string name="adhaar_number_validation">Adhaar Number<font color='#FF0000'>*</font></string>
     <string name="pan_number_validation">Pan Number<font color='#FF0000'>*</font></string>
     <string name="invoice_prefix_validation">Invoice Prefix<font color='#FF0000'>*</font></string>
     <string name="contact_name_validation">Contact Name<font color='#FF0000'>*</font></string>
@@ -585,6 +595,7 @@
     <string name="email_subscription">Email:</string>
     <string name="mobile_subs">Mobile:</string>
     <string name="proceed_to_pay">Proceed to Pay</string>
+    <string name="profile_image">Profile Photo</string>
     <string name="error_membership_plan">Please Choose Your Membership Plan</string>
     <string name="membership_id">Membership ID</string>
     <string name="membership_amount">Membership Amount</string>

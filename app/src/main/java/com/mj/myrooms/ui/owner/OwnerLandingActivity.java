@@ -13,8 +13,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +38,7 @@ import com.mj.myrooms.ui.owner.fragment.PaymentOwFragment;
 import com.mj.myrooms.ui.owner.fragment.ProfileOwFragment;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import me.ibrahimsn.lib.SmoothBottomBar;
 
@@ -95,5 +99,110 @@ public class OwnerLandingActivity extends AppCompatActivity {
             fragmentTransaction.commit();
         }
     }
+    /*
+    *//**
+     * dialog - filter
+     *//*
+    private void dialog_filter() {
+        try {
+            final Dialog dialog = DialogUtils.getInstance().createDialog(mActivity);
+            final DialogFilterSupplierBinding dialogBinding = DataBindingUtil.inflate(LayoutInflater.from(mActivity), R.layout.dialog_filter_supplier, null, false);
+            dialog.setContentView(dialogBinding.getRoot());
 
+            // title
+            dialogBinding.layoutToolbar.tvTitle.setText(getResources().getString(R.string.filter));
+
+            if (!TextUtils.isEmpty(fromDate)) {
+                dialogBinding.tvFromDate.setText(DateTimeUtils.getInstance().formatDateTime(
+                        fromDate,
+                        DateTimeUtils.DateFormats.yyyyMMdd.getLabel(),
+                        DateTimeUtils.DateFormats.ddMMMyyyy.getLabel()));
+                dialogBinding.tvFromDate.setTag(fromDate);
+            }
+            if (!TextUtils.isEmpty(toDate)) {
+                dialogBinding.tvToDate.setText(DateTimeUtils.getInstance().formatDateTime(
+                        toDate,
+                        DateTimeUtils.DateFormats.yyyyMMdd.getLabel(),
+                        DateTimeUtils.DateFormats.ddMMMyyyy.getLabel()));
+                dialogBinding.tvToDate.setTag(toDate);
+            }
+
+            if (object_customer != null) {
+                dialogBinding.tvCustomerName.setText(object_customer.getBranchName());
+            }
+
+            dialogBinding.llFromDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DialogUtils.getInstance().showDatePickerDialog(mActivity, false, dialogBinding.tvFromDate, new DialogUtils.OnDateTimePickerDialogClickListener() {
+                        @Override
+                        public void onOkButtonClick(View view, Calendar calendar) {
+                            dialogBinding.tvFromDate.setText(DateTimeUtils.getInstance().formatDateTime(calendar.getTime(), DateTimeUtils.DateFormats.ddMMMyyyy.getLabel()));
+                            dialogBinding.tvFromDate.setTag(DateTimeUtils.getInstance().formatDateTime(calendar.getTime(), DateFormats.yyyyMMdd.getLabel()));
+                        }
+                    });
+                }
+            });
+
+            dialogBinding.llToDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DialogUtils.getInstance().showDatePickerDialog(mActivity, false, dialogBinding.tvToDate, new DialogUtils.OnDateTimePickerDialogClickListener() {
+                        @Override
+                        public void onOkButtonClick(View view, Calendar calendar) {
+                            dialogBinding.tvToDate.setText(DateTimeUtils.getInstance().formatDateTime(calendar.getTime(), DateTimeUtils.DateFormats.ddMMMyyyy.getLabel()));
+                            dialogBinding.tvToDate.setTag(DateTimeUtils.getInstance().formatDateTime(calendar.getTime(), DateFormats.yyyyMMdd.getLabel()));
+                        }
+                    });
+                }
+            });
+
+            dialogBinding.llCompanyName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //dialog_customer(dialogBinding);
+                }
+            });
+
+            dialogBinding.btnClear.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utility.hideSoftKeyboard(mActivity);
+                    fromDate = "";
+                    toDate = "";
+                    object_customer = null;
+                    dialogBinding.tvFromDate.setText("");
+                    dialogBinding.tvFromDate.setTag("");
+                    dialogBinding.tvToDate.setText("");
+                    dialogBinding.tvToDate.setTag("");
+                    dialogBinding.tvCustomerName.setText("");
+                    dialogBinding.etSearchText.setText("");
+                }
+            });
+
+            dialogBinding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utility.hideSoftKeyboard(mActivity);
+                    dialog.dismiss();
+
+                    if (!TextUtils.isEmpty(dialogBinding.tvFromDate.getText().toString())) {
+                        fromDate = dialogBinding.tvFromDate.getTag().toString();
+                    }
+                    if (!TextUtils.isEmpty(dialogBinding.tvToDate.getText().toString())) {
+                        toDate = dialogBinding.tvToDate.getTag().toString();
+                    }
+                    if (!TextUtils.isEmpty(dialogBinding.etSearchText.getText().toString())) {
+                        text = dialogBinding.etSearchText.getText().toString();
+                    }
+                    startLoading(true);
+                }
+            });
+
+            dialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+*/
 }

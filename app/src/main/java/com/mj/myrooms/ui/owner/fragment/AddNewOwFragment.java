@@ -54,7 +54,7 @@ public class AddNewOwFragment extends Fragment {
         @Override
         public void onClick(View view) {
             IntentUtils.getInstance().navigateToNextActivity(mActivity,
-                    AddCustomerOw.class,
+                    AddRoomOw.class,
                     bundle,
                     true);
         }
@@ -63,7 +63,7 @@ public class AddNewOwFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 IntentUtils.getInstance().navigateToNextActivity(mActivity,
-                        AddRoomOw.class,
+                        AddCustomerOw.class,
                         bundle,
                         true);
             }
