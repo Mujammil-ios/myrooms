@@ -1,6 +1,32 @@
 <resources>
     <string name="app_name">myrooms</string>
 
+    <!-- myrooms string -->
+    <string name="lease_start_date">Lease Start Date<font color='#FF0000'>*</font></string>
+    <string name="lease_end_date">Lease End Date<font color='#FF0000'>*</font></string>
+    <string name="deposit_amount">Deposit Amount<font color='#FF0000'>*</font></string>
+    <string name="enter_lease_start_date">Enter Lease Start Date</string>
+    <string name="enter_lease_end_date">Enter Lease End Date</string>
+    <string name="enter_deposit_amount">Enter Deposit Amount</string>
+    <string name="nothing">Nothing</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="landing">Landing Page</string>
+    <string name="landlord_phone_label_validation">Phone number</string>
+    <string name="contact_name_without_validation">Contact Name</string>
+    <string name="contact_no_without_validation">Contact No.</string>
+    <string name="persnoal_details">Personal Information</string>
+    <string name="employment_details">Employment Details</string>
+    <string name="lease_details">Lease Details</string>
+    <string name="room_allocation">Room Allocation</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="identity_details">Identity Details</string>
+    <string name="error_enter_landlord_name">Please enter Landlord name</string>
+    <string name="enter_tenant_legal_name">Enter Tenant Legal Name</string>
+    <string name="create_tenant">Create Tenant</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="no_date_chosen">No Date Chosen</string>
+    <string name="this_tenant_legal_name_will_be_printed_on_invoices">This tenant legal name will be printed on invoices.</string>
+    <string name="customer_legal_name_validation">Tenant Legal Name <font color='#FF0000'>*</font></string>
     <!-- Register Account -->
     <string name="would_you_like_to">Would you like to join...</string>
     <string name="as_customer">As Customer</string>
@@ -18,8 +44,6 @@
     <string name="phone">Phone number</string>
     <string name="fullname">Full Name</string>
     <string name="not_have_account">Haven\'t an account?</string>
-    <string name="landing">Landing Page</string>
-    <string name="nothing">Nothing</string>
 
 
     <!--    From another project    -->
@@ -106,7 +130,6 @@
     <string name="error_km_greter_point_start">Point end km can not be less than Point start km</string>
     <string name="error_km_greter_point_end">Garage end km can not be less than Point end km</string>
     <string name="error_enter_company_name">Please enter company name</string>
-    <string name="error_enter_landlord_name">Please enter Landlord name</string>
     <string name="error_select_company_name">Please select company name</string>
     <string name="error_select_branch_name">Please select branch name</string>
     <string name="error_select_customer_name">Please select customer name</string>
@@ -183,7 +206,6 @@
 
     <string name="terms_of_service">terms of service</string>
     <string name="dashboard">Dashboard</string>
-    <string name="confirm_password">Confirm Password</string>
     <string name="update">Update</string>
     <string name="upload">Upload</string>
     <string name="add">Add</string>
@@ -451,12 +473,7 @@
     <string name="branch">Branch</string>
     <string name="supplier_details">Supplier Details</string>
     <string name="company_details">Company Details</string>
-    <string name="persnoal_details">Personal Information</string>
-    <string name="employment_details">Employment Details</string>
-    <string name="lease_details">Lease Details</string>
-    <string name="room_allocation">Room Allocation</string>
-    <string name="emergency_contact">Emergency Contact</string>
-    <string name="identity_details">Identity Details</string>
+
     <string name="search_supplier">Search Supplier</string>
     <string name="customer_number">Customer Number</string>
     <string name="share_only_invoice">View/Share Only Invoice</string>
@@ -469,8 +486,6 @@
     <string name="company_logo">Company Logo</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_company_legal_name">Enter Company Legal Name</string>
-    <string name="enter_tenant_legal_name">Enter Tenant Legal Name</string>
-    <string name="this_tenant_legal_name_will_be_printed_on_invoices">This tenant legal name will be printed on invoices.</string>
     <string name="this_company_name_can_be_short_name_or_brand_name_of_your_organization_this_name_will_be_displayed_for_selection_of_company_while_making_booking">This company name can be short name or brand name of your organization. This name will be displayed for selection of company while making booking.</string>
     <string name="this_landlord_name_can_be_short_name_or_brand_name_of_your_organization_this_name_will_be_displayed_for_selection_of_company_while_making_booking">This company name can be short name or brand name of your property. This name will be displayed while making invoices.</string>
     <string name="enter_sac_code">Enter SAC Code</string>
@@ -572,7 +587,6 @@
     <string name="city_s_validation">City(s)<font color='#FF0000'>*</font></string>
     <string name="select_package_s_validation">Select Package(s)<font color='#FF0000'>*</font></string>
     <string name="company_legal_name_validation">Company Legal Name <font color='#FF0000'>*</font></string>
-    <string name="customer_legal_name_validation">Tenant Legal Name <font color='#FF0000'>*</font></string>
     <string name="company_name_label_validation">Company Name <font color='#FF0000'>*</font></string>
     <string name="landlord_name_label_validation">Landlord Name <font color='#FF0000'>*</font></string>
     <string name="family_member_validation">Total Family Members<font color='#FF0000'>*</font></string>

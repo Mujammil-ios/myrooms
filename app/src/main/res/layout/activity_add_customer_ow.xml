@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".ui.supplier.CreateCompanyActivity">
+        tools:context=".ui.owner.activity.AddCustomerOw">
 
         <include
             android:id="@+id/layout_toolbar"
@@ -134,7 +134,7 @@
                                 android:layout_marginLeft="@dimen/space3"
                                 android:layout_marginRight="@dimen/space3"
                                 android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/phone"
+                                android:text="@string/landlord_phone_label_validation"
                                 android:textColor="@color/theme_gray3"
                                 android:textSize="@dimen/text8" />
 
@@ -177,6 +177,7 @@
                                     android:background="@drawable/bg_border"
                                     android:longClickable="false"
                                     android:padding="@dimen/space3"/>
+
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatImageView
@@ -247,34 +248,6 @@
                                 android:entries="@array/array_MSME"
                                 android:prompt="@string/error_select_company_composition" />
                         </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_msme_number"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="@dimen/space5">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                style="@style/TextView_black"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/space3"
-                                android:layout_marginRight="@dimen/space3"
-                                android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/msme_number"
-                                android:textColor="@color/theme_gray3"
-                                android:textSize="@dimen/text8" />
-
-                            <androidx.appcompat.widget.AppCompatEditText
-                                android:id="@+id/et_msme_number"
-                                style="@style/EditText"
-                                android:hint="@string/enter_msme_number"
-                                android:background="@drawable/bg_border"
-                                android:padding="@dimen/space8" />
-
-                        </LinearLayout>
-
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -710,6 +683,31 @@
                                 android:padding="@dimen/space8" />
 
                         </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space5">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextView_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space3"
+                                android:layout_marginRight="@dimen/space3"
+                                android:layout_marginBottom="@dimen/space2"
+                                android:text="@string/email_validation"
+                                android:textColor="@color/theme_gray3"
+                                android:textSize="@dimen/text8" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_email"
+                                style="@style/EditText"
+                                android:hint="@string/enter_email"
+                                android:background="@drawable/bg_border"
+                                android:padding="@dimen/space8" />
+                        </LinearLayout>
+
 
                     </LinearLayout>
 
@@ -735,7 +733,7 @@
                             android:layout_marginTop="@dimen/_10sdp"
                             style="@style/TextView_black"
                             android:textSize="@dimen/_16sdp"
-                            android:text="@string/financial_contact" />
+                            android:text="@string/contact" />
 
                         <CheckBox
                             android:id="@+id/cb_same_as_above"
@@ -766,7 +764,7 @@
                                 android:layout_marginLeft="@dimen/space3"
                                 android:layout_marginRight="@dimen/space3"
                                 android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/contact_name_validation"
+                                android:text="@string/contact_name_without_validation"
                                 android:textColor="@color/theme_gray3"
                                 android:textSize="@dimen/text8" />
 
@@ -792,7 +790,7 @@
                                 android:layout_marginLeft="@dimen/space3"
                                 android:layout_marginRight="@dimen/space3"
                                 android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/contact_no_validation"
+                                android:text="@string/contact_no_without_validation"
                                 android:textColor="@color/theme_gray3"
                                 android:textSize="@dimen/text8" />
 
@@ -807,6 +805,43 @@
 
                         </LinearLayout>
 
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="@string/lease_details" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space5"
+                    app:cardCornerRadius="@dimen/space10"
+                    app:cardElevation="@dimen/shadow">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            style="@style/TextView_black"
+                            android:textSize="@dimen/_14sdp"
+                            android:text="@string/contact" />-->
+
+<!--
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -820,16 +855,132 @@
                                 android:layout_marginLeft="@dimen/space3"
                                 android:layout_marginRight="@dimen/space3"
                                 android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/email_validation"
+                                android:text="@string/lease_start_date"
                                 android:textColor="@color/theme_gray3"
                                 android:textSize="@dimen/text8" />
 
                             <androidx.appcompat.widget.AppCompatEditText
-                                android:id="@+id/et_email"
+                                android:id="@+id/et_lease_start_date"
                                 style="@style/EditText"
-                                android:hint="@string/enter_email"
+                                android:hint="@string/enter_lease_start_date"
                                 android:background="@drawable/bg_border"
                                 android:padding="@dimen/space8" />
+
+                        </LinearLayout>
+-->
+                        <LinearLayout
+                            android:id="@+id/ll_start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space5">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextView_black"
+                                    android:layout_marginLeft="@dimen/space3"
+                                    android:layout_marginRight="@dimen/space3"
+                                    android:textColor="@color/theme_gray3"
+                                    android:text="@{String.format(@string/date_of_birth).toUpperCase()}"
+                                    android:textSize="@dimen/text8"/>
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_start_date"
+                                    style="@style/EditText"
+                                    android:layout_width="wrap_content"
+                                    android:enabled="false"
+                                    android:background="@drawable/bg_border"
+                                    android:longClickable="false"
+                                    android:padding="@dimen/space3"/>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/space5"
+                                app:srcCompat="@drawable/profile_icon"/>
+                        </LinearLayout>
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="@dimen/space5">-->
+
+<!--                            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                style="@style/TextView_black"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="@dimen/space3"-->
+<!--                                android:layout_marginRight="@dimen/space3"-->
+<!--                                android:layout_marginBottom="@dimen/space2"-->
+<!--                                android:text="@string/lease_end_date"-->
+<!--                                android:textColor="@color/theme_gray3"-->
+<!--                                android:textSize="@dimen/text8" />-->
+
+<!--                            <androidx.appcompat.widget.AppCompatEditText-->
+<!--                                android:id="@+id/et_lease_end_date"-->
+<!--                                style="@style/EditText"-->
+<!--                                android:inputType="number"-->
+<!--                                android:maxLength="10"-->
+<!--                                android:hint="@string/enter_lease_end_date"-->
+<!--                                android:background="@drawable/bg_border"-->
+<!--                                android:padding="@dimen/space8" />-->
+
+<!--                        </LinearLayout>-->
+                        <LinearLayout
+                            android:id="@+id/ll_end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space5">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextView_black"
+                                    android:layout_marginLeft="@dimen/space3"
+                                    android:layout_marginRight="@dimen/space3"
+                                    android:textColor="@color/theme_gray3"
+                                    android:text="@{String.format(@string/date_of_birth).toUpperCase()}"
+                                    android:textSize="@dimen/text8"/>
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_end_date"
+                                    style="@style/EditText"
+                                    android:layout_width="wrap_content"
+                                    android:enabled="false"
+                                    android:background="@drawable/bg_border"
+                                    android:longClickable="false"
+                                    android:padding="@dimen/space3"/>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/space5"
+                                app:srcCompat="@drawable/profile_icon"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space5">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 style="@style/TextView_black"
@@ -838,25 +989,22 @@
                                 android:layout_marginLeft="@dimen/space3"
                                 android:layout_marginRight="@dimen/space3"
                                 android:layout_marginBottom="@dimen/space2"
-                                android:text="@string/these_email_ids_will_receive_booing_mails_and_driver_details_mails"
+                                android:text="@string/deposit_amount"
                                 android:textColor="@color/theme_gray3"
                                 android:textSize="@dimen/text8" />
 
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_lease_deposit"
+                                style="@style/EditText"
+                                android:hint="@string/enter_deposit_amount"
+                                android:background="@drawable/bg_border"
+                                android:padding="@dimen/space8" />
                         </LinearLayout>
 
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    style="@style/TextAppearance.AppCompat.Headline"
-                    android:textSize="@dimen/_14sdp"
-                    android:text="@string/lease_details" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -876,7 +1024,6 @@
                         android:paddingRight="@dimen/space20"
                         android:text="@string/save_company"
                         android:textSize="@dimen/_9ssp" />
-
                 </LinearLayout>
 
             </LinearLayout>

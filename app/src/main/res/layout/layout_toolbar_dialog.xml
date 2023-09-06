@@ -5,15 +5,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_height"
-        android:background="@color/light_blue_main"
+        android:background="@drawable/bg_dialog_title"
         android:gravity="center"
         android:orientation="horizontal">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/home"
-            style="@style/ImageView_icon"
-            android:padding="@dimen/space3"
-            app:srcCompat="@drawable/send"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_title"
@@ -28,12 +22,5 @@
             android:textColor="@color/white"
             android:textSize="@dimen/toolbar_title_text"
             app:autoSizeTextType="uniform"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/menu"
-            style="@style/ImageView_icon"
-            android:padding="@dimen/space3"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/send"/>
     </LinearLayout>
 </layout>
