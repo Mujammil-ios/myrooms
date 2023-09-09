@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space5"
+            app:cardCornerRadius="@dimen/space10"
+            app:cardElevation="@dimen/shadow">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/space5">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/rent_amount"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_guest_name"
+                        style="@style/EditText"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/deposit_amount"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_deposit_amount"
+                        style="@style/EditText"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/landlord_name_label_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_landlord_name"
+                        style="@style/EditText"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/landlord_phone_label_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_landlord_phone"
+                        style="@style/EditText"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</layout>

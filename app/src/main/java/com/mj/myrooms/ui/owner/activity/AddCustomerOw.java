@@ -1,15 +1,21 @@
 package com.mj.myrooms.ui.owner.activity;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -18,9 +24,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
+import com.kyanogen.signatureview.SignatureView;
 import com.mj.myrooms.BaseAppCompatActivity;
 import com.mj.myrooms.R;
 import com.mj.myrooms.constant.Constant;
@@ -36,9 +47,13 @@ import com.mj.myrooms.utils.PreferenceUtils;
 import com.mj.myrooms.utils.Utility;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -94,12 +109,12 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        Spinner spinner_gst_status = (Spinner) findViewById(R.id.tv_gst_status_billing);
-        ArrayAdapter<CharSequence> adapter_gst_status = ArrayAdapter.createFromResource(this,
-                R.array.array_gst_status, android.R.layout.simple_spinner_item);
-        adapter_gst_status.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_gst_status.setAdapter(adapter_gst_status);
-        spinner_gst_status.setOnItemSelectedListener(this);
+//        Spinner spinner_gst_status = (Spinner) findViewById(R.id.tv_gst_status_billing);
+//        ArrayAdapter<CharSequence> adapter_gst_status = ArrayAdapter.createFromResource(this,
+//                R.array.array_gst_status, android.R.layout.simple_spinner_item);
+//        adapter_gst_status.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner_gst_status.setAdapter(adapter_gst_status);
+//        spinner_gst_status.setOnItemSelectedListener(this);
     }
 
     /**
@@ -149,7 +164,7 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
                 Utility.hideSoftKeyboard(mActivity);
 //                dialog_city();
                 break;
-            case R.id.tv_country_billing:
+            /*case R.id.tv_country_billing:
                 Utility.hideSoftKeyboard(mActivity);
 //                dialog_country_billing();
                 break;
@@ -160,7 +175,7 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
             case R.id.tv_city_billing:
                 Utility.hideSoftKeyboard(mActivity);
 //                dialog_city_billing();
-                break;
+                break;*/
             case R.id.company_logo_btn:
                 Utility.hideSoftKeyboard(mActivity);
                 flag = 1;
@@ -171,7 +186,7 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
                 flag = 2;
                 openGallery();
                 break;
-            case R.id.tan_document_btn:
+            /*case R.id.tan_document_btn:
                 Utility.hideSoftKeyboard(mActivity);
                 flag = 3;
                 openGallery();
@@ -180,7 +195,7 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
                 Utility.hideSoftKeyboard(mActivity);
                 flag = 4;
                 openGallery();
-                break;
+                break;*/
 
             case R.id.ll_start_date:
                 Utility.hideSoftKeyboard(mActivity);
@@ -1120,4 +1135,89 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
                     }
                 });
     }
+    /*private void signature_pad(){
+        BottomSheetDialog bottomSheet = new BottomSheetDialog(requireContext());
+        bottomSheet.setContentView(R.layout.bottom_sheet_signature_dialog);
+        bottomSheet.setCancelable(false);
+
+
+        try {
+            Field behaviorField = bottomSheet.getClass().getDeclaredField("behavior");
+            behaviorField.setAccessible(true);
+            final BottomSheetBehavior behavior = (BottomSheetBehavior) behaviorField.get(bottomSheet);
+            behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+
+                @Override
+                public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                    if (newState == BottomSheetBehavior.STATE_DRAGGING){
+                        behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                    }
+                }
+
+                @Override
+                public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+                }
+            });
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        AppCompatButton btnSave = bottomSheet.findViewById(R.id.btnSave);
+        AppCompatButton btnClear = bottomSheet.findViewById(R.id.btnClear);
+        ImageView imgSignature = bottomSheet.findViewById(R.id.imgSignature);
+        SignatureView signatureView = bottomSheet.findViewById(R.id.signature_view);
+
+        btnSave.setOnClickListener(view -> {
+            Bitmap bitmap = signatureView.getSignatureBitmap();
+            if(bitmap != null)
+            {
+                imgSignature.setImageBitmap(bitmap);
+                File defaultFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                BitmapDrawable bitmapDrawable = (BitmapDrawable)imgSignature.getDrawable();
+                try {
+                    Bitmap bmp =  bitmapDrawable.getBitmap();
+                    if(bmp != null)
+                    {
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+                        {
+                            defaultFile.getPath();
+                        }
+                        else
+                        {
+                            defaultFile.getPath();
+                        }
+                        try {
+                            String filename = "Booking ID sign "+object_booking.getBookingid()+".png";
+                            File file;
+                            file = new File(requireContext().getExternalFilesDir(null), "Sign");
+//                            File file = new File(defaultFile,filename);
+                            String pdfString = file.toString();
+                            filePath = pdfString;
+                            OutputStream outputStream = new FileOutputStream(file);
+                            bmp.compress(Bitmap.CompressFormat.JPEG,80,outputStream);
+                            Objects.requireNonNull(outputStream);
+
+                            Toast.makeText(requireContext(),"Digital Signature Save Successfully",Toast.LENGTH_SHORT).show();
+                        }catch(Exception e){
+                            Toast.makeText(requireContext(),"Error : " + e.getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else
+                    {
+                        Toast.makeText(requireContext(),"Please Generate Digital Signature To Save",Toast.LENGTH_SHORT).show();
+                    }
+                }catch(Exception e)
+                {
+                    Toast.makeText(requireContext(),"Please Generate Digital Signature To Save",Toast.LENGTH_SHORT).show();
+                }
+            }
+            bottomSheet.dismiss();
+            dialog_Drop_OTP_verification(String.valueOf(km),filePath);
+        });
+        btnClear.setOnClickListener(view -> {
+            signatureView.clearCanvas();
+        });
+        bottomSheet.show();
+    }*/
 }

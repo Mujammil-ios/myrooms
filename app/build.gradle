@@ -80,9 +80,6 @@ dependencies {
     }
     // pagination
     implementation 'com.github.markomilos:paginate:0.5.1'
-    // drawing pad
-    implementation 'com.github.gcacace:signature-pad:1.2.1'
-
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
 
     implementation 'com.github.pramodkr123:ConvertWebViewToPdfDemo:1.0.4'
@@ -95,6 +92,10 @@ dependencies {
     implementation 'com.airbnb.android:lottie:4.1.0'
 //    bottom bar
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+//    Signature View
+    implementation 'com.kyanogen.signatureview:signature-view:1.2'
+
+
 
 
 

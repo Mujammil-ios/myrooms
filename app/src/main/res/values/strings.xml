@@ -25,8 +25,23 @@
     <string name="create_tenant">Create Tenant</string>
     <string name="choose_date">Choose Date</string>
     <string name="no_date_chosen">No Date Chosen</string>
+    <string name="signature_pad">Signature Pad</string>
     <string name="this_tenant_legal_name_will_be_printed_on_invoices">This tenant legal name will be printed on invoices.</string>
     <string name="customer_legal_name_validation">Tenant Legal Name <font color='#FF0000'>*</font></string>
+    <string name="room_property_details">Room &amp; Property Details</string>
+    <string name="property_name">Property Name</string>
+    <string name="property_name_hint">E.g Room 1 , Room A etc</string>
+    <string name="property_type">Property Type</string>
+    <string name="number_of_rooms">Number of Rooms</string>
+    <string name="desc_rooms">Description</string>
+    <string name="rent_amount">Rent Amount</string>
+    <string name="select_property_type">Select Property Type</string>
+    <string name="select_rooms_numbers">Select Rooms Number</string>
+    <string name="pricing_landlord_details">Pricing and Landlord Details</string>
+    <string name="property_details_amenities">Property Details and Photos</string>
+
+    <string name="room_address">Address</string>
+
     <!-- Register Account -->
     <string name="would_you_like_to">Would you like to join...</string>
     <string name="as_customer">As Customer</string>
