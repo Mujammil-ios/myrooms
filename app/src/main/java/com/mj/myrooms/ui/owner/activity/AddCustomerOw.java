@@ -1120,14 +1120,14 @@ public class AddCustomerOw extends BaseAppCompatActivity implements View.OnClick
                     @Override
                     public void onOkButtonClick() {
                         AddCustomerOw.super.onBackPressed();
-                        if (isFromRegistration) {
+                        /*if (isFromRegistration) {
                             IntentUtils.getInstance().navigateToNextActivity(mActivity,
                                     OwnerLandingActivity.class,
                                     new Bundle(),
                                     true);
                         } else {
                             finish();
-                        }
+                        }*/
                     }
 
                     @Override

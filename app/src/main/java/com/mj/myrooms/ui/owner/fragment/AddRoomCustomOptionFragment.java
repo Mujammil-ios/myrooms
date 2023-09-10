@@ -13,17 +13,17 @@ import android.view.ViewGroup;
 
 import com.mj.myrooms.BaseFragment;
 import com.mj.myrooms.R;
-import com.mj.myrooms.databinding.FragmentAddRoomPhotoBinding;
-import com.mj.myrooms.databinding.FragmentOwAddRoomDetailBinding;
+import com.mj.myrooms.databinding.FragmentAddRoomCustomOptionBinding;
+import com.mj.myrooms.databinding.FragmentAddRoomPricingBinding;
 import com.mj.myrooms.ui.owner.activity.AddRoomOw;
 import com.mj.myrooms.utils.Utility;
 
 
-public class AddRoomPhotoFragment extends BaseFragment implements View.OnClickListener {
+public class AddRoomCustomOptionFragment extends BaseFragment implements View.OnClickListener {
     private final String TAG = getClass().getSimpleName();
     private Activity mActivity;
     private AddRoomOw parentActivity;
-    private FragmentAddRoomPhotoBinding layoutBinding;
+    private FragmentAddRoomCustomOptionBinding layoutBinding;
 
 //    private UserAdapter /adapter_customer;
 //    private ArrayList<CustomerModel> list_customer;
@@ -33,8 +33,8 @@ public class AddRoomPhotoFragment extends BaseFragment implements View.OnClickLi
 //
 //    private CustomerModel object_customer;
 
-    public static OwAddRoomDetailFragment newInstance(int instance, Bundle args) {
-        OwAddRoomDetailFragment fragment = new OwAddRoomDetailFragment();
+    public static AddRoomPricingFragment newInstance(int instance, Bundle args) {
+        AddRoomPricingFragment fragment = new AddRoomPricingFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -48,7 +48,7 @@ public class AddRoomPhotoFragment extends BaseFragment implements View.OnClickLi
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        layoutBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_room_photo, container, false);
+        layoutBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_room_custom_option, container, false);
         return layoutBinding.getRoot();
     }
 
@@ -82,8 +82,8 @@ public class AddRoomPhotoFragment extends BaseFragment implements View.OnClickLi
      * initialize listener
      */
     private void initListener() {
-        layoutBinding.tvCustomerName.setOnClickListener(this);
-        layoutBinding.tvRentalLocation.setOnClickListener(this);
+//        layoutBinding.etLandlordName.setOnClickListener(this);
+//        layoutBinding.etLandlordPhone.setOnClickListener(this);
     }
 
     /**
@@ -287,18 +287,23 @@ public class AddRoomPhotoFragment extends BaseFragment implements View.OnClickLi
     public boolean isValidate() {
         boolean isValidate = true;
 
-        /*if (TextUtils.isEmpty(layoutBinding.tvCustomerName.getText().toString().trim())) {
+        /*if (TextUtils.isEmpty(layoutBinding.etGuestName.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_select_customer_name));
             return false;
         }
 
-        if (TextUtils.isEmpty(layoutBinding.tvRentalLocation.getText().toString().trim())) {
+        if (TextUtils.isEmpty(layoutBinding.etDepositAmount.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_rental_location));
             return false;
         }
 
         if (TextUtils.isEmpty(layoutBinding.etGuestName.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_guest_name));
+            return false;
+        }
+
+        if (TextUtils.isEmpty(layoutBinding.etLandlordName.getText().toString().trim())) {
+            showSnackbarError(mActivity, getString(R.string.error_enter_contant_no));
             return false;
         }*/
 

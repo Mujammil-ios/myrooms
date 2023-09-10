@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space5"
+            app:cardCornerRadius="@dimen/space10"
+            app:cardElevation="@dimen/shadow">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/space5">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/property_name"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_guest_name"
+                        style="@style/EditText"
+                        android:hint="@string/property_name_hint"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/property_type"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_rental_location"
+                        style="@style/TextView_black"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_border"
+                        android:drawableRight="@drawable/profile"
+                        android:drawablePadding="@dimen/space5"
+                        android:hint="@string/select_property_type"
+                        android:padding="@dimen/space8"
+                        android:textColor="@color/theme" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space5"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/number_of_rooms"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_customer_name"
+                        style="@style/TextView_black"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_border"
+                        android:drawableRight="@drawable/profile"
+                        android:drawablePadding="@dimen/space5"
+                        android:hint="@string/select_rooms_numbers"
+                        android:padding="@dimen/space8"
+                        android:textColor="@color/theme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space5"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/address_line_1_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_address_line_1"
+                        style="@style/EditText"
+                        android:hint="@string/enter_address_line_1"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/address_line_2"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_address_line_2"
+                        style="@style/EditText"
+                        android:hint="@string/enter_address_line_2"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/country_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_country"
+                        style="@style/TextView_black"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_border"
+                        android:drawableRight="@drawable/profile"
+                        android:drawablePadding="@dimen/space5"
+                        android:hint="@string/select_country"
+                        android:padding="@dimen/space8"
+                        android:textColor="@color/theme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/state_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_state"
+                        style="@style/TextView_black"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_border"
+                        android:drawableRight="@drawable/profile"
+                        android:drawablePadding="@dimen/space5"
+                        android:hint="@string/select_state"
+                        android:padding="@dimen/space8"
+                        android:textColor="@color/theme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/city_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_city"
+                        style="@style/TextView_black"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_border"
+                        android:drawableRight="@drawable/profile"
+                        android:drawablePadding="@dimen/space5"
+                        android:hint="@string/select_city"
+                        android:padding="@dimen/space8"
+                        android:textColor="@color/theme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/pincode_validation"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_pincode"
+                        style="@style/EditText"
+                        android:hint="@string/enter_pincode"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/space8" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_black"
+                        android:layout_marginLeft="@dimen/space3"
+                        android:layout_marginRight="@dimen/space3"
+                        android:layout_marginBottom="@dimen/space2"
+                        android:text="@string/alternate_no"
+                        android:textColor="@color/theme_gray3"
+                        android:textSize="@dimen/text8" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_alternateno"
+                        style="@style/EditText"
+                        android:background="@drawable/bg_border"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/space8" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</layout>

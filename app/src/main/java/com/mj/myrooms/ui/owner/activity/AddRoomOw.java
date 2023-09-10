@@ -24,6 +24,8 @@ import com.mj.myrooms.constant.Constant;
 import com.mj.myrooms.databinding.ActivityAddRoomOwBinding;
 import com.mj.myrooms.databinding.GridTabRoomBinding;
 import com.mj.myrooms.object.TabModel;
+import com.mj.myrooms.ui.owner.fragment.AddRoomCustomOptionFragment;
+import com.mj.myrooms.ui.owner.fragment.AddRoomPhotoFragment;
 import com.mj.myrooms.ui.owner.fragment.AddRoomPricingFragment;
 import com.mj.myrooms.ui.owner.fragment.OwAddRoomDetailFragment;
 import com.mj.myrooms.utils.IntentUtils;
@@ -120,15 +122,15 @@ public class AddRoomOw extends BaseAppCompatActivity implements View.OnClickList
                     if (((AddRoomPricingFragment) fragment).isValidate()) {
                         nextPage();
                     }
-                } /*else if (fragment instanceof SupplierDutySupplierFragment) {
-                    if (((SupplierDutySupplierFragment) fragment).isValidate()) {
+                } else if (fragment instanceof AddRoomPhotoFragment) {
+                    if (((AddRoomPhotoFragment) fragment).isValidate()) {
                         nextPage();
                     }
-                } else if (fragment instanceof DropDetailSupplierFragment) {
-                    if (((DropDetailSupplierFragment) fragment).isValidate()) {
+                }else if (fragment instanceof AddRoomCustomOptionFragment) {
+                    if (((AddRoomCustomOptionFragment) fragment).isValidate()) {
                         nextPage();
                     }
-                } else if (fragment instanceof AddOnsSupplierFragment) {
+                }/* else if (fragment instanceof AddOnsSupplierFragment) {
                     if (((AddOnsSupplierFragment) fragment).isValidate()) {
                         if (isUpdate) {
 //                            request_updateBooking();
@@ -169,8 +171,8 @@ public class AddRoomOw extends BaseAppCompatActivity implements View.OnClickList
         adapter_tab = new ViewPagerAdapter(getSupportFragmentManager());
         adapter_tab.addFragment(new OwAddRoomDetailFragment(), new TabModel(getResources().getString(R.string.room_property_details), 1));
         adapter_tab.addFragment(new AddRoomPricingFragment(), new TabModel(getResources().getString(R.string.pricing_landlord_details), 2));
-//        adapter_tab.addFragment(new SupplierDutySupplierFragment(), new TabModel(getResources().getString(R.string.supplier_and_duty_details), 3));
-//        adapter_tab.addFragment(new DropDetailSupplierFragment(), new TabModel(getResources().getString(R.string.drop_detail), 4));
+        adapter_tab.addFragment(new AddRoomPhotoFragment(), new TabModel(getResources().getString(R.string.property_details_amenities), 3));
+        adapter_tab.addFragment(new AddRoomCustomOptionFragment(), new TabModel(getResources().getString(R.string.optional_detail_custom_option), 4));
 //        adapter_tab.addFragment(new AddOnsSupplierFragment(), new TabModel(getResources().getString(R.string.add_one), 5));
 
         layoutBinding.vpBooking.setAdapter(adapter_tab);

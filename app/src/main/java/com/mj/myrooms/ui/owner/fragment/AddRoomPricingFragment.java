@@ -287,7 +287,7 @@ public class AddRoomPricingFragment extends BaseFragment implements View.OnClick
     public boolean isValidate() {
         boolean isValidate = true;
 
-        if (TextUtils.isEmpty(layoutBinding.etGuestName.getText().toString().trim())) {
+        /*if (TextUtils.isEmpty(layoutBinding.etGuestName.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_select_customer_name));
             return false;
         }
@@ -305,7 +305,7 @@ public class AddRoomPricingFragment extends BaseFragment implements View.OnClick
         if (TextUtils.isEmpty(layoutBinding.etLandlordName.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_contant_no));
             return false;
-        }
+        }*/
 
 //        parentActivity.object_booking.setCcompanyid(object_customer.getCompanyid());
 //        parentActivity.object_booking.setCbranchid(object_customer.getBranchid());

@@ -299,7 +299,7 @@ public class OwAddRoomDetailFragment extends BaseFragment implements View.OnClic
     public boolean isValidate() {
         boolean isValidate = true;
 
-        if (TextUtils.isEmpty(layoutBinding.tvCustomerName.getText().toString().trim())) {
+       /* if (TextUtils.isEmpty(layoutBinding.tvCustomerName.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_select_customer_name));
             return false;
         }
@@ -312,7 +312,7 @@ public class OwAddRoomDetailFragment extends BaseFragment implements View.OnClic
         if (TextUtils.isEmpty(layoutBinding.etGuestName.getText().toString().trim())) {
             showSnackbarError(mActivity, getString(R.string.error_enter_guest_name));
             return false;
-        }
+        }*/
 
 //        parentActivity.object_booking.setCcompanyid(object_customer.getCompanyid());
 //        parentActivity.object_booking.setCbranchid(object_customer.getBranchid());

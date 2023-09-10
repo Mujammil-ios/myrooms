@@ -39,6 +39,7 @@
     <string name="select_rooms_numbers">Select Rooms Number</string>
     <string name="pricing_landlord_details">Pricing and Landlord Details</string>
     <string name="property_details_amenities">Property Details and Photos</string>
+    <string name="optional_detail_custom_option">Optional Details and Customizable Sections</string>
 
     <string name="room_address">Address</string>
 
