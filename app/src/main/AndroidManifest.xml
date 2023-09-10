@@ -25,6 +25,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".myrooms.ui.owner.activity.AddRoomOw"
             android:exported="false" />
         <activity
