@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.mj.myrooms.BaseFragment;
 import com.mj.myrooms.R;
 import com.mj.myrooms.adapter.HomeOwCustomerAdapter;
 import com.mj.myrooms.ui.owner.OwnerLandingActivity;
@@ -21,7 +22,7 @@ import com.paginate.Paginate;
 import java.util.ArrayList;
 
 
-public class HomeOwFragment extends Fragment {
+public class HomeOwFragment extends BaseFragment implements View.OnClickListener {
     private final String TAG = getClass().getSimpleName();
     private Activity mActivity;
     private OwnerLandingActivity parentActivity;
@@ -102,4 +103,8 @@ public class HomeOwFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onClick(View view) {
+
+    }
 }
