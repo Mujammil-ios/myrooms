@@ -20,6 +20,7 @@ public class HomeOwCustomerListAdapter extends RecyclerView.Adapter<HomeOwCustom
     private Activity mActivity;
 
     private AdapterView.OnItemClickListener onItemClickListener;
+
     private OnDashboardClickListener listener;
     private ArrayList<TabModel> list_data;
     int count = 0, notificationCount = 0;

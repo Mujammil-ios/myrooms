@@ -52,12 +52,19 @@ public class HomeOwFragment extends BaseFragment implements View.OnClickListener
 
     private final int totalDuration = 1000;
     private final int updateInterval = 10;
+    /**
+     * initialize toolbar
+     */
 
 
     public HomeOwFragment() {
         // Required empty public constructor
     }
 
+
+    /**
+     * initialize toolbar
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
