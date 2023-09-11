@@ -50,8 +50,8 @@ public class HomeOwFragment extends BaseFragment implements View.OnClickListener
     private TextView textPercentage;
     private TextView textRemainingTime;
 
-    private final int totalDuration = 1000; // Total duration in milliseconds
-    private final int updateInterval = 10; // Interval to update progress and text
+    private final int totalDuration = 1000;
+    private final int updateInterval = 10;
 
 
     public HomeOwFragment() {
@@ -97,9 +97,9 @@ public class HomeOwFragment extends BaseFragment implements View.OnClickListener
         int halfDuration = totalDuration / 2;
 
         if (millisUntilFinished <= halfDuration) {
-            return 50; // Fill up to half when half the time has passed
+            return 50;
         } else {
-            return 100; // Fill up to full when the full time has passed
+            return 100;
         }
     }
 
