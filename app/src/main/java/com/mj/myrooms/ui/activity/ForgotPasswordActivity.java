@@ -85,16 +85,11 @@ public class ForgotPasswordActivity extends BaseAppCompatActivity implements Vie
         }
     }
 
-    /**
-     * initialize toolbar
-     */
+
     private void initToolbar() {
 
     }
 
-    /**
-     * initialize listener
-     */
     private void initListener() {
         layoutBinding.etMobile.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
