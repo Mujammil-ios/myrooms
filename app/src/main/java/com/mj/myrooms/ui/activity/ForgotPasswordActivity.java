@@ -85,7 +85,9 @@ public class ForgotPasswordActivity extends BaseAppCompatActivity implements Vie
         }
     }
 
-
+    /**
+     * initialize toolbar
+     */
     private void initToolbar() {
 
     }
